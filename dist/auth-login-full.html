@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="LetStart Admin is a full featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.">
+  <meta name="keywords"
+    content="admin, panels, dashboard, admin panel, multipurpose, bootstrap, bootstrap4, all type of dashboards">
+  <meta name="author" content="MatrrDigital">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | Jadwalinbe</title>
+  <link rel="shortcut icon" href="assets/images/jbpurple.png" type="image/x-icon" />
+
+  <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+  <link rel="stylesheet" href="assets/css/icons.css" />
+  <link rel="stylesheet" href="assets/libs/wave-effect/css/waves.min.css" />
+  <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
+  <!-- ================== BEGIN PAGE LEVEL END ================== -->
+  <!-- ================== Plugins CSS  ================== -->
+  <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
+  <!-- ================== Plugins CSS end ================== -->
+  <!-- ================== BEGIN APP CSS  ================== -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- ================== END APP CSS ================== -->
+
+  <!-- ================== BEGIN POLYFILLS  ================== -->
+  <!--[if lt IE 9]>
+     <script src="assets/libs/html5shiv/js/html5shiv.js"></script>
+     <script src="assets/libs/respondjs/js/respond.min.js"></script>
+  <![endif]-->
+  <!-- ================== END POLYFILLS  ================== -->
+</head>
+
+<style>
+  body {
+    background-image: url("/assets/images/abstract.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center;
+    
+  }
+</style>
+
+<body>
+  <!-- Begin Page -->
+  <div class="auth-pages full-auth-screen">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 col-xl-3 px-md-0">
+          <div class="auth-page-sidebar">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7 col-xl-4 offset-lg-1 px-md-0 align-items-center">
+          <style>
+            .card-login {
+              background-color: transparent;
+              box-shadow: none;
+            }
+          </style>
+          <div class="card mb-0 p-2 p-md-5 h-100 card-login">
+            <div class="card-body">
+              <div class="clearfix">
+                <img src="assets/images/jbpurple.png" height="50" alt="Lettstart Admin">
+              </div>
+              <h5 class="mt-4 font-weight-600">Hi, Admin!</h5>
+              <p class="text-muted mb-4">Silahkan login menggunakan username dan password anda.</p>
+              <form id="loginForm" name="loginForm" novalidate>
+                <div class="form-group floating-label">
+                  <input type="text" class="form-control" name="validation-email" id="username" />
+                  <label for="username">Username</label>
+                  <div class="validation-error d-none font-size-13">
+                    <p>Username must be a valid email address</p>
+                  </div>
+                </div>
+                <div class="form-group floating-label">
+                  <input type="password" class="form-control" name="validation-password" id="password" />
+                  <label for="password">Password</label>
+                  <div class="validation-error d-none font-size-13">
+                    <p>This field is required</p>
+                  </div>
+                </div>
+
+                <div class="form-group floating-label">
+                  <input type="password" class="form-control" name="validation-password" id="password" />
+                  <label for="password">Recaptcha</label>
+                  <div class="validation-error d-none font-size-13">
+                    <p>This field is required</p>
+                  </div>
+                </div>
+
+                <div class="form-group text-center">
+                  <button class="btn btn-primary btn-block" data-effect="wave" type="submit"> Log In
+                  </button>
+                </div>
+
+                <div class="copyrigth" style="font-size: 11px;">
+                  <p>Copyright © 2023 <a href="#">Diskominfo Kab. Ogan Ilir</a> - All rights reserved.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 img-opd">
+          <style>
+            .img-opd {
+              text-align: end;
+              padding-top: 20px;
+              padding-right: 20px;
+            }
+          </style>
+          <img src="assets/images/logo-oganilir.png" height="30" class="mr-2" alt="Logo Bangkit">
+          <img src="assets/images/logo-ori.png" height="30" class="mr-2" alt="Logo Bangkit">
+          <img src="assets/images/bangkit.png" height="30" alt="Logo Ogan Ilir">
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- Page End -->
+  <!-- ================== BEGIN BASE JS ================== -->
+  <script src="assets/js/vendor.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <!-- ================== END BASE JS ================== -->
+
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+  <script src="assets/js/utils/colors.js"></script>
+  <script src="assets/libs/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="assets/libs/jquery-validation/js/jquery.validate.min.js"></script>
+  <script src="assets/libs/jquery-validation/js/additional-methods.min.js"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
+  <!-- ================== BEGIN PAGE JS ================== -->
+  <script src="assets/js/app.js"></script>
+  <!-- ================== END PAGE JS ================== -->
+  <script>
+    $(".auth-user-testimonial .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    });
+    //Initialize form
+    $('#loginForm').validate({
+      focusInvalid: false,
+      rules: {
+        'validation-email': {
+          required: true,
+          email: true
+        },
+        'validation-password': {
+          required: true,
+        }
+      },
+      errorPlacement: function errorPlacement(error, element) {
+        $(element).siblings(".validation-error").removeClass("d-none")
+        return true
+      },
+      highlight: function (element) {
+        var $el = $(element);
+        var $parent = $el.parents('.form-group');
+        $parent.addClass("invalid-field")
+      },
+      unhighlight: function (element) {
+        var $el = $(element);
+        var $parent = $el.parents('.form-group');
+        $parent.removeClass("invalid-field");
+        $(element).siblings(".validation-error").addClass("d-none")
+      },
+      submitHandler: function (form) {
+        var formdata = $(form).serializeArray();
+        var data = {};
+        $(formdata).each(function (index, obj) {
+          data[obj.name] = obj.value;
+        });
+        alert("Data has been submitted. Please see console log");
+        console.log("form data ===>", data);
+        $(form)[0].reset();
+        $(".floating-label").removeClass("enable-floating-label");
+      }
+    });
+  </script>
+</body>
+
+</html>

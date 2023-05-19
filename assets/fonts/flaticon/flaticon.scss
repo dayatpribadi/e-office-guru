@@ -1,0 +1,173 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?c01c69daf6ec06d52eeec59e72c8e57e") format("truetype"),
+url("./flaticon.woff?c01c69daf6ec06d52eeec59e72c8e57e") format("woff"),
+url("./flaticon.woff2?c01c69daf6ec06d52eeec59e72c8e57e") format("woff2"),
+url("./flaticon.eot?c01c69daf6ec06d52eeec59e72c8e57e#iefix") format("embedded-opentype"),
+url("./flaticon.svg?c01c69daf6ec06d52eeec59e72c8e57e#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "diamond": "\f101",
+    "speed": "\f102",
+    "trophy": "\f103",
+    "target": "\f104",
+    "telephone": "\f105",
+    "message": "\f106",
+    "security": "\f107",
+    "headphones": "\f108",
+    "search": "\f109",
+    "award": "\f10a",
+    "appointment": "\f10b",
+    "pay": "\f10c",
+    "select": "\f10d",
+    "shopping-bag": "\f10e",
+    "mail": "\f10f",
+    "email": "\f110",
+    "right-quote": "\f111",
+    "telephone-1": "\f112",
+    "search-1": "\f113",
+    "rating": "\f114",
+    "guarantee": "\f115",
+    "award-1": "\f116",
+    "best-price": "\f117",
+    "24-hours": "\f118",
+    "team": "\f119",
+    "buy-button": "\f11a",
+    "smartphone": "\f11b",
+    "best": "\f11c",
+    "global-services": "\f11d",
+    "language": "\f11e",
+    "book": "\f11f",
+    "translation": "\f120",
+    "book-1": "\f121",
+    "coding": "\f122",
+    "chinese": "\f123",
+    "sign-language": "\f124",
+    "teacher": "\f125",
+);
+
+.flaticon-diamond:before {
+    content: map-get($flaticon-map, "diamond");
+}
+.flaticon-speed:before {
+    content: map-get($flaticon-map, "speed");
+}
+.flaticon-trophy:before {
+    content: map-get($flaticon-map, "trophy");
+}
+.flaticon-target:before {
+    content: map-get($flaticon-map, "target");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
+.flaticon-message:before {
+    content: map-get($flaticon-map, "message");
+}
+.flaticon-security:before {
+    content: map-get($flaticon-map, "security");
+}
+.flaticon-headphones:before {
+    content: map-get($flaticon-map, "headphones");
+}
+.flaticon-search:before {
+    content: map-get($flaticon-map, "search");
+}
+.flaticon-award:before {
+    content: map-get($flaticon-map, "award");
+}
+.flaticon-appointment:before {
+    content: map-get($flaticon-map, "appointment");
+}
+.flaticon-pay:before {
+    content: map-get($flaticon-map, "pay");
+}
+.flaticon-select:before {
+    content: map-get($flaticon-map, "select");
+}
+.flaticon-shopping-bag:before {
+    content: map-get($flaticon-map, "shopping-bag");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-right-quote:before {
+    content: map-get($flaticon-map, "right-quote");
+}
+.flaticon-telephone-1:before {
+    content: map-get($flaticon-map, "telephone-1");
+}
+.flaticon-search-1:before {
+    content: map-get($flaticon-map, "search-1");
+}
+.flaticon-rating:before {
+    content: map-get($flaticon-map, "rating");
+}
+.flaticon-guarantee:before {
+    content: map-get($flaticon-map, "guarantee");
+}
+.flaticon-award-1:before {
+    content: map-get($flaticon-map, "award-1");
+}
+.flaticon-best-price:before {
+    content: map-get($flaticon-map, "best-price");
+}
+.flaticon-24-hours:before {
+    content: map-get($flaticon-map, "24-hours");
+}
+.flaticon-team:before {
+    content: map-get($flaticon-map, "team");
+}
+.flaticon-buy-button:before {
+    content: map-get($flaticon-map, "buy-button");
+}
+.flaticon-smartphone:before {
+    content: map-get($flaticon-map, "smartphone");
+}
+.flaticon-best:before {
+    content: map-get($flaticon-map, "best");
+}
+.flaticon-global-services:before {
+    content: map-get($flaticon-map, "global-services");
+}
+.flaticon-language:before {
+    content: map-get($flaticon-map, "language");
+}
+.flaticon-book:before {
+    content: map-get($flaticon-map, "book");
+}
+.flaticon-translation:before {
+    content: map-get($flaticon-map, "translation");
+}
+.flaticon-book-1:before {
+    content: map-get($flaticon-map, "book-1");
+}
+.flaticon-coding:before {
+    content: map-get($flaticon-map, "coding");
+}
+.flaticon-chinese:before {
+    content: map-get($flaticon-map, "chinese");
+}
+.flaticon-sign-language:before {
+    content: map-get($flaticon-map, "sign-language");
+}
+.flaticon-teacher:before {
+    content: map-get($flaticon-map, "teacher");
+}

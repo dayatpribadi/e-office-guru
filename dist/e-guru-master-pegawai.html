@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="description"
+     content="LetStart Admin is a full featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.">
+   <meta name="keywords"
+     content="admin, panels, dashboard, admin panel, multipurpose, bootstrap, bootstrap4, all type of dashboards">
+   <meta name="author" content="MatrrDigital">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Member Grid | Letstart - Responsive Admin Dashboard Template</title>
+   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+   <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+   <link rel="stylesheet" href="assets/css/icons.css" />
+   <link rel="stylesheet" href="assets/libs/wave-effect/css/waves.min.css" />
+   <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
+   <!-- ================== BEGIN PAGE LEVEL END ================== -->
+   <!-- ================== BEGIN APP CSS  ================== -->
+   <link rel="stylesheet" href="assets/css/bootstrap.css" />
+   <link rel="stylesheet" href="assets/css/styles.css" />
+   <!-- ================== END APP CSS ================== -->
+
+   <!-- ================== BEGIN POLYFILLS  ================== -->
+   <!--[if lt IE 9]>
+      <script src="assets/libs/html5shiv/js/html5shiv.js"></script>
+      <script src="assets/libs/respondjs/js/respond.min.js"></script>
+   <![endif]-->
+   <!-- ================== END POLYFILLS  ================== -->
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      <!-- Begin Header -->
+      <header id="page-topbar" class="topbar-header">
+         <div class="navbar-header">
+            <div class="left-bar">
+               <div class="navbar-brand-box">
+                  <a href="index.html" class="logo logo-dark">
+                     <span class="logo-sm"><img src="../assets/img/favicon.png" alt="Lettstart Admin"></span>
+                     <span class="logo-lg"><img src="../assets/img/e-office-guru.png" alt="Lettstart Admin"></span>
+                  </a>
+                  <a href="index.html" class="logo logo-light">
+                     <span class="logo-sm"><img src="../assets/img/favicon.png" alt="Lettstart Admin"></span>
+                     <span class="logo-lg"><img src="../assets/img/e-office-guru.png" alt="Lettstart Admin"></span>
+                  </a>
+               </div>
+               <button type="button" id="vertical-menu-btn" class="btn hamburg-icon">
+                  <i class="mdi mdi-menu"></i>
+               </button>
+            </div>
+            <div class="right-bar">
+               <div class="d-inline-flex ml-0 ml-sm-2 d-lg-none dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-search-dropdown"
+                     aria-expanded="false" class="btn header-item notify-icon">
+                     <i class="bx bx-search"></i>
+                  </button>
+                  <div aria-labelledby="page-header-search-dropdown"
+                     class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                     <form class="p-3">
+                        <div class="search-box">
+                           <div class="position-relative">
+                              <input type="text" placeholder="Search..." class="form-control form-control-sm">
+                              <i class="bx bx-search icon"></i>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="d-none d-lg-inline-flex ml-2">
+                  <button type="button" data-toggle="fullscreen" class="btn header-item notify-icon" id="full-screen">
+                     <i class="bx bx-fullscreen"></i>
+                  </button>
+               </div>
+               <div class="d-inline-flex ml-0 ml-sm-2 dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-notification-dropdown"
+                     aria-expanded="false" class="btn header-item notify-icon position-relative">
+                     <i class="bx bx-bell bx-tada"></i>
+                     <span class="badge badge-danger badge-pill notify-icon-badge">3</span>
+                  </button>
+                  <div aria-labelledby="page-header-notification-dropdown"
+                     class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                     <div class="notify-title p-3">
+                        <h5 class="font-size-14 font-weight-600 mb-0">
+                           <span>Notification</span>
+                           <a class="text-primary" href="javascript: void(0);">
+                              <small>Clear All</small>
+                           </a>
+                        </h5>
+                     </div>
+                     <div class="notify-scroll">
+                        <div class="scroll-content" id="notify-scrollbar">
+                           <div class="scroll-content">
+                              <a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-primary">
+                                       <i class="bx bx-user-plus"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       New user registered.
+                                       <small class="text-muted">5 hours ago</small></p>
+                                 </div>
+                              </a>
+                              <a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs">
+                                       <img alt="Lettstart Admin" class="img-fluid rounded-circle" src="assets/images/users/avatar-1.jpg">
+                                    </div>
+                                    <p class="media-body">
+                                       John likes your photo
+                                       <small class="text-muted">5 hours ago</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs">
+                                       <img alt="Lettstart Admin" class="img-fluid rounded-circle" src="assets/images/users/avatar-2.jpg">
+                                    </div>
+                                    <p class="media-body">
+                                       Johnson
+                                       <small class="text-muted">Wow! admin looks good</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-danger">
+                                       <i class="bx bx-server"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       Server getting down
+                                       <small class="text-muted">1 min ago</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-info">
+                                       <i class="bx bx-tag"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       Someone tag you
+                                       <small class="text-muted">2 hours ago</small></p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="notify-all">
+                           <a href="javascript: void(0);" class="text-primary text-center p-3">
+                              <small>View All</small>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-inline-flex ml-0 ml-sm-2 dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-profile-dropdown"
+                     aria-expanded="false" class="btn header-item">
+                     <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar" class="avatar avatar-xs mr-0">
+                     <span class="d-none d-xl-inline-block ml-1">Administrator</span>
+                     <i class="bx bx-chevron-down d-none d-xl-inline-block"></i>
+                  </button>
+                  <div aria-labelledby="page-header-profile-dropdown" class="dropdown-menu-right dropdown-menu">
+                     <a href="javascript: void(0);" class="dropdown-item">
+                        <i class="bx bx-user mr-1"></i> Profile
+                     </a>
+                     <a href="/index.html" class="text-danger dropdown-item">
+                        <i class="bx bx-log-in mr-1 text-danger"></i> Logout
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header End -->
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      <!-- Begin Left Navigation -->
+      <aside class="side-navbar">
+         <div class="scroll-content" id="metismenu">
+            <ul id="side-menu" class="metismenu list-unstyled">
+               <li class="side-nav-title side-nav-item menu-title">Dashboard</li>
+               <li>
+                  <a class="side-nav-link" href="/dist/e-guru-dashboard.html">
+                     <i class="bx bx-desktop"></i>
+                     <span> Dashboard</span>
+                  </a>
+               </li>
+               <li class="side-nav-title side-nav-item menu-title">Kepegawaian</li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> Kepegawaian</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="/dist/e-guru-master-pegawai.html"> Master Pegawai </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-Jabatan </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-Tusi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-PD </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Mass Reset Password </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="../documentation/index.html" target="_blank" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-file"></i>
+                     <span> Documentation</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </aside>
+      <!-- Left Navigation End -->
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                    <h3 class="mb-1 font-weight-bold">Master Pegawai Admin</h3>
+                    <a href="e-guru-tambah-pegawai.html" class="btn btn-outline-white waves-effect waves-float">
+                       <i class="bx bx-plus bx-flashing"></i>
+                       Tambah Pegawai
+                    </a>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                     <!-- Inline Form -->
+                     <div class="row">
+                        <div class="col-12">
+                        <div class="card">
+                           <div class="card-body">
+                              <form>
+                              <div class="form-row align-items-center">
+                                 <div class="col-3">
+                                    <div class="form-group">
+                                       <label for="example-email">Nama Lengkap</label>
+                                       <input type="email" id="example-email" name="example-email" class="form-control"
+                                         placeholder="Cari Berdasarkan Nama Lengkap">
+                                     </div>
+                                 </div>
+                                 <div class="col-3">
+                                    <div class="form-group">
+                                       <label for="example-email">NIP</label>
+                                       <input type="email" id="example-email" name="example-email" class="form-control"
+                                         placeholder="Cari Berdasarkan NIP">
+                                     </div>
+                                 </div>
+                                 <div class="col-4">
+                                    <div class="form-group">
+                                       <label for="example-select">Satuan Pendidikan</label>
+                                       <select class="form-control" id="example-select">
+                                         <option>TK Taman Bermain</option>
+                                         <option>SD Negeri Harapan</option>
+                                         <option>SD Negeri Nusantara</option>
+                                       </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-2 text-center">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light my-2"><i class="bx bx-search"></i> Filter Pencarian</button>
+                                 </div>
+                              </div>
+                              </form>
+         
+                           </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                        </div> <!-- end col -->
+                     </div>
+                     <!-- end row -->
+
+                     <div class="row">
+                        <div class="col-xl-4 col-sm-6">
+                           <div class="card">
+                              <div class="card-body">
+                                 <div class="media">
+                                    <div class="position-relative">
+                                       <img src="assets/images/users-thumbs/user-2.jpg" class="avatar avatar-lg"  alt="user thumb"/>
+                                       <span class="contact-status offline"></span>
+                                    </div>
+                                    <div class="media-body">
+                                       <h5 class="font-weight-600 mb-1">
+                                          <a href="javascript: void(0);" class="text-dark">Yofi Kurniawan, S.H., M.H.</a>
+                                       </h5>
+                                       <p class="text-muted mb-0">1945081719900120001</p>
+                                       <div class="mt-2">
+                                          <a href="javascript: void(0);" class="btn btn-warning btn-sm mr-2">User Tidak Terdaftar</a>
+                                          <a href="javascript: void(0);" class="btn btn-danger btn-sm">Pensiun</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="mt-5 dflex-between-center">
+                                    <h6 class="mr-2 font-weight-bold">Perangkat Daerah : </h6>
+                                    <div>
+                                       <label class="badge badge-soft-default mr-2">Pemkab Ogan Ilir</label>
+                                    </div>
+                                 </div>
+                                 <div class="dflex-between-center">Unit Kerja : </h6>
+                                     <div>
+                                       <label class="badge badge-soft-default mr-2">Dinas Pendidikan dan Kebudayaan</label>
+                                     </div>
+                                  </div>
+                                 <div class="dflex-between-center">Satuan Pendidikan : </h6>
+                                     <div>
+                                       <label class="badge badge-soft-default mr-2">SMP Negeri Nusantara</label>
+                                     </div>
+                                  </div>
+                              </div>
+                              <div class="card-footer bg-transparent border-top">
+                                 <div class="d-flex">
+                                    <div>
+                                       <a href="#" class="badge badge-soft-primary mr-2">LIHAT PROFIL</a>
+                                     </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6">
+                           <div class="card">
+                              <div class="card-body">
+                                 <div class="media">
+                                    <div class="position-relative">
+                                      <img src="assets/images/users-thumbs/user-7.jpg" class="avatar avatar-lg"  alt="user thumb"/>
+                                      <span class="contact-status online"></span>
+                                    </div>
+                                    <div class="media-body">
+                                       <h5 class="font-weight-600 mb-1">
+                                          <a href="javascript: void(0);" class="text-dark">Putri Kurniati, S.H., M.H.</a>
+                                       </h5>
+                                       <p class="text-muted mb-0">1945081719900120001</p>
+                                       <div class="mt-2">
+                                          <a href="javascript: void(0);" class="btn btn-primary btn-sm mr-2">User Terdaftar</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="mt-5 dflex-between-center">
+                                    <h6 class="mr-2 font-weight-bold">Perangkat Daerah : </h6>
+                                    <div>
+                                       <label class="badge badge-soft-default mr-2">Pemkab Ogan Ilir</label>
+                                    </div>
+                                 </div>
+                                 <div class="dflex-between-center">Unit Kerja : </h6>
+                                     <div>
+                                       <label class="badge badge-soft-default mr-2">Dinas Pendidikan dan Kebudayaan</label>
+                                     </div>
+                                  </div>
+                                 <div class="dflex-between-center">Satuan Pendidikan : </h6>
+                                     <div>
+                                       <label class="badge badge-soft-default mr-2">SMP Negeri Nusantara</label>
+                                     </div>
+                                  </div>
+                              </div>
+                              <div class="card-footer bg-transparent border-top">
+                                 <div class="d-flex">
+                                    <div>
+                                       <a href="#" class="badge badge-soft-primary mr-2">LIHAT PROFIL</a>
+                                     </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-4 col-sm-6">
+                           <div class="card">
+                              <div class="card-body">
+                                 <div class="media">
+                                    <div class="position-relative">
+                                       <img src="assets/images/users-thumbs/user-4.jpg" class="avatar avatar-lg"  alt="user thumb"/>
+                                       <span class="contact-status online"></span>
+                                     </div>
+                                    <div class="media-body">
+                                       <h5 class="font-weight-600 mb-1">
+                                          <a href="javascript: void(0);" class="text-dark">Putri Kurniati, S.H., M.H.</a>
+                                       </h5>
+                                       <p class="text-muted mb-0">1945081719900120001</p>
+                                       <div class="mt-2">
+                                          <a href="javascript: void(0);" class="btn btn-primary btn-sm mr-2">User Terdaftar</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="mt-5 dflex-between-center">
+                                    <h6 class="mr-2 font-weight-bold">Perangkat Daerah : </h6>
+                                    <div>
+                                       <label class="badge badge-soft-default mr-2">Pemkab Ogan Ilir</label>
+                                    </div>
+                                 </div>
+                                 <div class="dflex-between-center">Unit Kerja : </h6>
+                                     <div>
+                                       <label class="badge badge-soft-default mr-2">Dinas Pendidikan dan Kebudayaan</label>
+                                     </div>
+                                  </div>
+                                 <div class="dflex-between-center">Satuan Pendidikan : </h6>
+                                     <div>
+                                       <label class="badge badge-soft-default mr-2">SMP Negeri Nusantara</label>
+                                     </div>
+                                  </div>
+                              </div>
+                              <div class="card-footer bg-transparent border-top">
+                                 <div class="d-flex">
+                                    <div>
+                                       <a href="#" class="badge badge-soft-primary mr-2">LIHAT PROFIL</a>
+                                     </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- main content End -->
+      <!-- footer -->
+      <!-- footer -->
+      <footer class="footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6 mb-1 mb-md-0">
+                  <span>2020 &copy; Marvel.</span>
+               </div>
+               <div class="col-md-6 text-md-right">
+                  <span>Design and Develop By <span class="text-primary font-weight-500">Lettstart Design</span></span>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <div class="setting-sidebar">
+         <div class="card mb-0">
+            <div class="card-header">
+               <h5 class="card-title dflex-between-center">
+                  Layouts
+                  <a href="javascript:void(0)"><i class="mdi mdi-close fs-sm"></i></a>
+               </h5>
+            </div>
+            <div class="card-body">
+               <div class="layout">
+                  <a href="index-horizontal.html">
+                     <img src="assets/images/horizontal.png" alt="Lettstart Admin" class="img-fluid"/>
+                     <h6 class="font-size-16">Horizontal Layout</h6>
+                  </a>
+               </div>
+               <div class="layout">
+                  <a href="index.html">
+                     <img src="assets/images/vertical.png" alt="Lettstart Admin" class="img-fluid" />
+                     <h6 class="font-size-16">Vertical Layout</h6>
+                  </a>
+               </div>
+               <div class="layout">
+                  <a href="layout-dark-sidebar.html">
+                     <img src="assets/images/dark.png" alt="Lettstart Admin" class="img-fluid" />
+                     <h6 class="font-size-16">Dark Sidebar</h6>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>
