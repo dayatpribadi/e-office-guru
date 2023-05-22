@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="description"
+     content="LetStart Admin is a full featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.">
+   <meta name="keywords"
+     content="admin, panels, dashboard, admin panel, multipurpose, bootstrap, bootstrap4, all type of dashboards">
+   <meta name="author" content="MatrrDigital">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>E-Office Guru | Rekap Absen</title>
+   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+   <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+   <link rel="stylesheet" href="assets/css/icons.css" />
+   <link rel="stylesheet" href="assets/libs/wave-effect/css/waves.min.css" />
+   <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
+   
+   <!-- ================== BEGIN PAGE LEVEL END ================== -->
+   <!-- ================== Plugins CSS  ================== -->
+   <link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css">
+   <link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/bootstrap-touchspin/css/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" />
+   <link href="assets/libs/dropify/css/dropify.min.css" rel="stylesheet" />
+   <!-- ================== Plugins CSS ================== -->
+   <!-- ================== BEGIN APP CSS  ================== -->
+   <link rel="stylesheet" href="assets/css/bootstrap.css" />
+   <link rel="stylesheet" href="assets/css/styles.css" />
+   <!-- ================== END APP CSS ================== -->
+
+   <!-- ================== BEGIN POLYFILLS  ================== -->
+   <!--[if lt IE 9]>
+      <script src="assets/libs/html5shiv/js/html5shiv.js"></script>
+      <script src="assets/libs/respondjs/js/respond.min.js"></script>
+   <![endif]-->
+   <!-- ================== END POLYFILLS  ================== -->
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      <!-- Begin Header -->
+      <header id="page-topbar" class="topbar-header">
+         <div class="navbar-header">
+            <div class="left-bar">
+               <div class="navbar-brand-box">
+                  <a href="index.html" class="logo logo-dark">
+                     <span class="logo-sm"><img src="../assets/img/favicon.png" alt="Lettstart Admin"></span>
+                     <span class="logo-lg"><img src="../assets/img/e-office-guru.png" alt="Lettstart Admin"></span>
+                  </a>
+                  <a href="index.html" class="logo logo-light">
+                     <span class="logo-sm"><img src="../assets/img/favicon.png" alt="Lettstart Admin"></span>
+                     <span class="logo-lg"><img src="../assets/img/e-office-guru.png" alt="Lettstart Admin"></span>
+                  </a>
+               </div>
+               <button type="button" id="vertical-menu-btn" class="btn hamburg-icon">
+                  <i class="mdi mdi-menu"></i>
+               </button>
+            </div>
+            <div class="right-bar">
+               <div class="d-inline-flex ml-0 ml-sm-2 d-lg-none dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-search-dropdown"
+                     aria-expanded="false" class="btn header-item notify-icon">
+                     <i class="bx bx-search"></i>
+                  </button>
+                  <div aria-labelledby="page-header-search-dropdown"
+                     class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                     <form class="p-3">
+                        <div class="search-box">
+                           <div class="position-relative">
+                              <input type="text" placeholder="Search..." class="form-control form-control-sm">
+                              <i class="bx bx-search icon"></i>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="d-none d-lg-inline-flex ml-2">
+                  <button type="button" data-toggle="fullscreen" class="btn header-item notify-icon" id="full-screen">
+                     <i class="bx bx-fullscreen"></i>
+                  </button>
+               </div>
+               <div class="d-inline-flex ml-0 ml-sm-2 dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-notification-dropdown"
+                     aria-expanded="false" class="btn header-item notify-icon position-relative">
+                     <i class="bx bx-bell bx-tada"></i>
+                     <span class="badge badge-danger badge-pill notify-icon-badge">3</span>
+                  </button>
+                  <div aria-labelledby="page-header-notification-dropdown"
+                     class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                     <div class="notify-title p-3">
+                        <h5 class="font-size-14 font-weight-600 mb-0">
+                           <span>Notification</span>
+                           <a class="text-primary" href="javascript: void(0);">
+                              <small>Clear All</small>
+                           </a>
+                        </h5>
+                     </div>
+                     <div class="notify-scroll">
+                        <div class="scroll-content" id="notify-scrollbar">
+                           <div class="scroll-content">
+                              <a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-primary">
+                                       <i class="bx bx-user-plus"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       New user registered.
+                                       <small class="text-muted">5 hours ago</small></p>
+                                 </div>
+                              </a>
+                              <a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs">
+                                       <img alt="Lettstart Admin" class="img-fluid rounded-circle" src="assets/images/users/avatar-1.jpg">
+                                    </div>
+                                    <p class="media-body">
+                                       John likes your photo
+                                       <small class="text-muted">5 hours ago</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs">
+                                       <img alt="Lettstart Admin" class="img-fluid rounded-circle" src="assets/images/users/avatar-2.jpg">
+                                    </div>
+                                    <p class="media-body">
+                                       Johnson
+                                       <small class="text-muted">Wow! admin looks good</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-danger">
+                                       <i class="bx bx-server"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       Server getting down
+                                       <small class="text-muted">1 min ago</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-info">
+                                       <i class="bx bx-tag"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       Someone tag you
+                                       <small class="text-muted">2 hours ago</small></p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="notify-all">
+                           <a href="javascript: void(0);" class="text-primary text-center p-3">
+                              <small>View All</small>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-inline-flex ml-0 ml-sm-2 dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-profile-dropdown"
+                     aria-expanded="false" class="btn header-item">
+                     <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar" class="avatar avatar-xs mr-0">
+                     <span class="d-none d-xl-inline-block ml-1">Administrator</span>
+                     <i class="bx bx-chevron-down d-none d-xl-inline-block"></i>
+                  </button>
+                  <div aria-labelledby="page-header-profile-dropdown" class="dropdown-menu-right dropdown-menu">
+                     <a href="javascript: void(0);" class="dropdown-item">
+                        <i class="bx bx-user mr-1"></i> Profile
+                     </a>
+                     <a href="/index.html" class="text-danger dropdown-item">
+                        <i class="bx bx-log-in mr-1 text-danger"></i> Logout
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header End -->
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      <!-- Begin Left Navigation -->
+      <aside class="side-navbar">
+         <div class="scroll-content" id="metismenu">
+            <ul id="side-menu" class="metismenu list-unstyled">
+               <li class="side-nav-title side-nav-item menu-title">Dashboard</li>
+               <li>
+                  <a class="side-nav-link" href="../dist/e-guru-dashboard.html">
+                     <i class="bx bx-desktop"></i>
+                     <span> Dashboard</span>
+                  </a>
+               </li>
+               <li class="side-nav-title side-nav-item menu-title">Master Data</li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> Import Data Master</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-unitkerja.html"> Import Unit Kerja </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-skpd.html"> Import SKPD </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-pegawai.html"> Import Pegawai </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-tupoksi.html"> Import Tupoksi </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> Kepegawaian</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-master-pegawai.html"> Master Pegawai </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-Jabatan </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-Tusi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-PD </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Mass Reset Password </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> E-Absensi</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Pengaturan Shift</a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Rekapitulasi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Laporan Absensi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Log </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="../documentation/index.html" target="_blank" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-file"></i>
+                     <span> Documentation</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </aside>
+      <!-- Left Navigation End -->
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                    <h3 class="mb-1 font-weight-bold">Log Absensi</h3>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <!-- Inline Form -->
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="card">
+                           <div class="card-body">
+                              <form>
+                              <div class="form-row justify-content-between align-items-center">
+                                 <div class="col-12 col-md-4">
+                                    <div class="form-group">
+                                       <label for="example-select">Nama Sekolah <span class="text-danger">*</span></label>
+                                       <select class="form-control" id="example-select">
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                          <option>SMP Negeri</option>
+                                       </select>
+                                       </div>
+                                 </div>
+                                 <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                       <label for="example-select">Pilih Bulan <span class="text-danger">*</span></label>
+                                       <select class="form-control" id="example-select">
+                                          <option>Januari</option>
+                                          <option>Februari</option>
+                                          <option>Maret</option>
+                                          <option>April</option>
+                                          <option>Mei</option>
+                                          <option>Juni</option>
+                                          <option>Juli</option>
+                                       </select>
+                                       </div>
+                                 </div>
+                                 <div class="col-12 col-md-3">
+                                    <div class="form-group">
+                                       <label for="example-select">Pilih Tahun</label>
+                                       <select class="form-control" id="example-select">
+                                          <option>2023</option>
+                                          <option>2022</option>
+                                          <option>2021</option>
+                                       </select>
+                                       </div>
+                                 </div>
+                                 <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light mr-2"><i class="bx bx-search"></i> Filter Pencarian</button>
+                                 </div>
+                              </div>
+                              </form>
+                           </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                     </div> <!-- end col -->
+                  </div>
+                  <!-- end row -->
+
+                  <!-- Inline Form -->
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="extra-btn-table">
+                                 <button type="button" class="btn btn-primary" data-toggle="modal"
+                                 data-target="#tambahlog" data-effect="wave">
+                                    <i class="bx bx-plus bx-flashing"></i>
+                                    Tambah Log
+                                 </button>
+                              </div>
+                              <div class="row pt-lg-2">
+                                 <div class="col-xl-12 mt-lg-5">
+                                    <div class="responsive-table-plugin">
+                                       <div class="table-rep-plugin">
+                                         <div class="table-responsive" data-pattern="priority-columns">
+                                             <table class="table table-centered dt-responsive w-100 dataTable no-footer dtr-inline project-list" id="view_project_list">
+                                                <thead class="thead-light">
+                                                   <tr>
+                                                      <th>No</th>
+                                                      <th>NIP</th>
+                                                      <th>Nama</th>
+                                                      <th>Tanggal</th>
+                                                      <th>Status</th>
+                                                      <th>Dibuat Oleh</th>
+                                                      <th>Aksi</th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>1</td>
+                                                      <td>198010210092872001</td>
+                                                      <td>Muhammad Aksan</td>
+                                                      <td>Senin, 15 Mei 2023 <span class="badge badge-primary">1</span></td>
+                                                      <td>Diklat (DKL)</td>
+                                                      <td>
+                                                         <div class="d-block d-md-flex flex-md-column justify-content-center">
+                                                            <a href="#" class="text-muted"><i class="bx bx-user fs-sm mr-1"></i>Dibuat Oleh : <span style="font-weight: 800; text-transform: uppercase;">Zainuban</span></a>
+                                                            <a href="#" class="text-muted"><i class="bx bx-calendar fs-sm mr-1"></i>Tanggal : 12 Mei 2023 | 21:24:31</a>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <a href="#" type="button" data-toggle="modal"
+                                                         data-target="#detail-log" class="badge badge-success text-center"><i class="bx bx-show fs-sm"></i></a>
+                                                         <a href="#" class="badge badge-danger text-center"><i class="bx bx-trash fs-sm"></i></a>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>                                    
+                                    
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div> <!-- end col -->
+                              </div> <!-- end row -->
+                           </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                     </div> <!-- end col -->
+                  </div>
+                  <!-- end row -->
+
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Modal Tambah Log -->
+      <!-- Center modal content -->
+      <div class="modal fade" id="tambahlog" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="myCenterModalLabel">Tambah Log</h4>
+            
+            </div>
+            <div class="modal-body">
+               <form action="#">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="form-group floating-label enable-floating-label show-label">
+                           <label for="pegawai">Pilih Pegawai<span class="text-danger">*</span></label>
+                           <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                              data-placeholder="Choose ...">
+                              <option value="YK">Yofi Kur</option>
+                              <option value="AT">Ariel Tatum</option>
+                              <option value="AT">Sigi Wimala</option>
+                              <option value="AT">Riyani Jangkaru</option>
+                              <option value="AT">Maria Ozawa</option>
+                           </select>
+                           <div class="validation-error d-none font-size-13">
+                              Designation can not be blank.
+                           </div>
+                        </div>     
+                     </div>
+                     <div class="col-12">
+                        <div class="form-group floating-label enable-floating-label show-label">
+                           <label for="Alasan">Alasan Tidak Hadir<span class="text-danger">*</span></label>
+                           <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                              data-placeholder="Choose ...">
+                              <option value="CU">Cuti Umroh</option>
+                              <option value="SK">Sakit</option>
+                           </select>
+                           <div class="validation-error d-none font-size-13">
+                              Designation can not be blank.
+                           </div>
+                        </div>     
+                     </div>
+                     <div class="col-12 col-md-6">
+                        <div class="form-group floating-label enable-floating-label show-label">
+                           <input class="form-control" id="tgl-awal" name="validation-designation" type="date"
+                              placeholder="tgl-awal">
+                           <label for="tgl-awal">Tanggal Awal<span class="text-danger">*</span></label>
+                           <div class="validation-error d-none font-size-13">
+                              Designation can not be blank.
+                           </div>
+                        </div>   
+                     </div>
+                     <div class="col-12 col-md-6">
+                        <div class="form-group floating-label enable-floating-label show-label">
+                           <input class="form-control" id="tgl-akhir" name="validation-designation" type="date"
+                              placeholder="tgl-akhir">
+                           <label for="tgl-akhir">Tanggal Akhir<span class="text-danger">*</span></label>
+                           <div class="validation-error d-none font-size-13">
+                              Designation can not be blank.
+                           </div>
+                        </div>   
+                     </div>
+                     <div class="col-12 mb-3">
+                        <label class="mb-1 font-weight-medium text-muted">Keterangan</label>
+                        <textarea id="textarea" class="form-control" maxlength="225" rows="3"
+                          placeholder="This textarea has a limit of 225 chars."></textarea>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="mt-3">
+                           <label class="mb-1 font-weight-medium text-muted">Bukti</label>
+                          <input type="file" data-plugins="dropify" data-max-file-size="1M" />
+                          <p class="text-danger text-center mt-2 mb-0">Max File size : 2Mb | Tipe File Upload : JPEG, PNG, JPG</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="text-right">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
+                     <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Tambah</button>
+                  </div>
+               </form>
+            </div>
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+            <!-- Modal Tambah Log -->
+      <!-- Center modal content -->
+      <div class="modal fade" id="detail-log" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-body">
+ 							<!-- task details -->
+                      <div class="col-12">
+                        <div class="mt-3 pt-2">
+                           <h5 class="mb-5 pt-2 font-weight-600">Detail Absensi Log</h5>
+                              <div class="table-responsive">
+                                 <table class="table table-borderless text-muted mb-5 table-sm">
+                                    <tbody>
+                                       <tr>
+                                          <th class="pl-0" scope="row">Nama Pegawai</th>
+                                          <td class="font-weight-bold">Michale Jackson Paranginangin</td>
+                                       </tr>
+                                       <tr>
+                                          <th class="pl-0" scope="row">NIP</th>
+                                          <td>198720292000101022001</td>
+                                       </tr>
+                                       <tr>
+                                          <th class="pl-0" scope="row">Status</th>
+                                          <td><span class="badge badge-warning">Diklat (DKL)</span></td>
+                                       </tr>
+                                       <tr>
+                                          <th class="pl-0" scope="row">Daftar Tanggal</th>
+                                          <td>
+                                             <p><span class="font-weight-bold mr-2">1.</span>Senin, 15 Mei 2023</p>
+                                             <p><span class="font-weight-bold mr-2">2.</span>Selasa, 16 Mei 2023</p>
+                                             <p><span class="font-weight-bold mr-2">3.</span>Rabu, 17 Mei 2023</p>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <th class="pl-0" scope="row">Jumlah</th>
+                                          <td><span class="badge badge-warning">3</span></td>
+                                       </tr>
+                                       <tr>
+                                          <th class="pl-0" scope="row">Lampiran Bukti</th>
+                                          <td>
+                                             <div class="card mb-2 shadow-none border">
+                                                <div class="p-1 px-2">
+                                                   <div class="row align-items-center">
+                                                      <div class="col-auto">
+                                                         <i class="bx bxs-file-doc fs-sm"></i>
+                                                      </div>
+                                                      <div class="col pl-0">
+                                                         <a href="javascript:void(0);" class="text-muted font-weight-bold">Bukti.PNG</a>
+                                                         <p class="mb-0">1.25 MB</p>
+                                                      </div>
+                                                      <div class="col-auto">
+                                                         <!-- Button -->
+                                                         <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom"
+                                                            title="Download" class="btn btn-link text-primary btn-lg p-0">
+                                                            <i class='bx bxs-download fs-xs'></i>
+                                                         </a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           <div class="clearfix float-right">
+                              <button class="btn btn-default" data-effect="wave" type="button" data-dismiss="modal">Tutup</button>
+                           </div>
+                        </div>
+							</div> <!-- end col -->
+               </div>
+            </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- main content End -->
+      <!-- footer -->
+      <!-- footer -->
+      <footer class="footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6 mb-1 mb-md-0">
+                  <span>2023 &copy; e-Office Guru Kab. Ogan Ilir.</span>
+               </div>
+               <div class="col-md-6 text-md-right">
+                  <span>Develop By <span class="text-primary font-weight-500">Pusdatin | Diskominfo Kab. Ogan Ilir</span></span>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <div class="setting-sidebar">
+         <div class="card mb-0">
+            <div class="card-header">
+               <h5 class="card-title dflex-between-center">
+                  Layouts
+                  <a href="javascript:void(0)"><i class="mdi mdi-close fs-sm"></i></a>
+               </h5>
+            </div>
+            <div class="card-body">
+               <div class="layout">
+                  <a href="index-horizontal.html">
+                     <img src="assets/images/horizontal.png" alt="Lettstart Admin" class="img-fluid"/>
+                     <h6 class="font-size-16">Horizontal Layout</h6>
+                  </a>
+               </div>
+               <div class="layout">
+                  <a href="index.html">
+                     <img src="assets/images/vertical.png" alt="Lettstart Admin" class="img-fluid" />
+                     <h6 class="font-size-16">Vertical Layout</h6>
+                  </a>
+               </div>
+               <div class="layout">
+                  <a href="layout-dark-sidebar.html">
+                     <img src="assets/images/dark.png" alt="Lettstart Admin" class="img-fluid" />
+                     <h6 class="font-size-16">Dark Sidebar</h6>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+   <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
+   <script src="assets/libs/mohithg-switchery/switchery.min.js"></script>
+   <script src="assets/libs/multiselect/js/jquery.multi-select.js"></script>
+   <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+   <script src="assets/libs/select2/js/select2.min.js"></script>
+   <script src="assets/libs/jquery-mockjax/jquery.mockjax.min.js"></script>
+   <script src="assets/libs/devbridge-autocomplete/jquery.autocomplete.min.js"></script>
+   <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+   <script src="assets/libs/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+   <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+  <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+  <script src="assets/libs/dropify/js/dropify.min.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <script src="assets/libs/flatpicker/js/flatpickr.js"></script>
+   <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+   <script src="assets/libs/chartjs/js/Chart.bundle.min.js"></script>
+   <script src="assets/js/utils/colors.js"></script>
+   <script src="assets/js/pages/dashboard.init.js"></script>
+   <script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.responsive.min.js"></script>
+   <script src="assets/libs/datatables/js/responsive.bootstrap4.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.keyTable.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.select.min.js"></script>
+   <script src="assets/js/pages/project-list.init.js"></script>
+   <script src="assets/js/pages/form-advanced.init.js"></script>
+   <script src="assets/js/pages/form-fileuploads.init.js"></script>
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

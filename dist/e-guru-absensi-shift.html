@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="description"
+     content="LetStart Admin is a full featured, multipurpose, premium bootstrap admin template built with Bootstrap 4 Framework, HTML5, CSS and JQuery.">
+   <meta name="keywords"
+     content="admin, panels, dashboard, admin panel, multipurpose, bootstrap, bootstrap4, all type of dashboards">
+   <meta name="author" content="MatrrDigital">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>E-Office Guru | Rekap Absen</title>
+   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+   <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
+   <link rel="stylesheet" href="assets/css/icons.css" />
+   <link rel="stylesheet" href="assets/libs/wave-effect/css/waves.min.css" />
+   <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
+   <!-- ================== BEGIN PAGE LEVEL END ================== -->
+   <!-- ================== Plugins CSS  ================== -->
+   <link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css">
+   <link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <!-- ================== Plugins CSS ================== -->
+   <!-- ================== BEGIN APP CSS  ================== -->
+   <link rel="stylesheet" href="assets/css/bootstrap.css" />
+   <link rel="stylesheet" href="assets/css/styles.css" />
+   <!-- ================== END APP CSS ================== -->
+
+   <!-- ================== BEGIN POLYFILLS  ================== -->
+   <!--[if lt IE 9]>
+      <script src="assets/libs/html5shiv/js/html5shiv.js"></script>
+      <script src="assets/libs/respondjs/js/respond.min.js"></script>
+   <![endif]-->
+   <!-- ================== END POLYFILLS  ================== -->
+</head>
+
+<body>
+   <!-- Begin Page -->
+   <div class="page-wrapper">
+      <!-- Begin Header -->
+      <!-- Begin Header -->
+      <header id="page-topbar" class="topbar-header">
+         <div class="navbar-header">
+            <div class="left-bar">
+               <div class="navbar-brand-box">
+                  <a href="index.html" class="logo logo-dark">
+                     <span class="logo-sm"><img src="../assets/img/favicon.png" alt="Lettstart Admin"></span>
+                     <span class="logo-lg"><img src="../assets/img/e-office-guru.png" alt="Lettstart Admin"></span>
+                  </a>
+                  <a href="index.html" class="logo logo-light">
+                     <span class="logo-sm"><img src="../assets/img/favicon.png" alt="Lettstart Admin"></span>
+                     <span class="logo-lg"><img src="../assets/img/e-office-guru.png" alt="Lettstart Admin"></span>
+                  </a>
+               </div>
+               <button type="button" id="vertical-menu-btn" class="btn hamburg-icon">
+                  <i class="mdi mdi-menu"></i>
+               </button>
+            </div>
+            <div class="right-bar">
+               <div class="d-inline-flex ml-0 ml-sm-2 d-lg-none dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-search-dropdown"
+                     aria-expanded="false" class="btn header-item notify-icon">
+                     <i class="bx bx-search"></i>
+                  </button>
+                  <div aria-labelledby="page-header-search-dropdown"
+                     class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                     <form class="p-3">
+                        <div class="search-box">
+                           <div class="position-relative">
+                              <input type="text" placeholder="Search..." class="form-control form-control-sm">
+                              <i class="bx bx-search icon"></i>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="d-none d-lg-inline-flex ml-2">
+                  <button type="button" data-toggle="fullscreen" class="btn header-item notify-icon" id="full-screen">
+                     <i class="bx bx-fullscreen"></i>
+                  </button>
+               </div>
+               <div class="d-inline-flex ml-0 ml-sm-2 dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-notification-dropdown"
+                     aria-expanded="false" class="btn header-item notify-icon position-relative">
+                     <i class="bx bx-bell bx-tada"></i>
+                     <span class="badge badge-danger badge-pill notify-icon-badge">3</span>
+                  </button>
+                  <div aria-labelledby="page-header-notification-dropdown"
+                     class="dropdown-menu-lg dropdown-menu-right p-0 dropdown-menu">
+                     <div class="notify-title p-3">
+                        <h5 class="font-size-14 font-weight-600 mb-0">
+                           <span>Notification</span>
+                           <a class="text-primary" href="javascript: void(0);">
+                              <small>Clear All</small>
+                           </a>
+                        </h5>
+                     </div>
+                     <div class="notify-scroll">
+                        <div class="scroll-content" id="notify-scrollbar">
+                           <div class="scroll-content">
+                              <a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-primary">
+                                       <i class="bx bx-user-plus"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       New user registered.
+                                       <small class="text-muted">5 hours ago</small></p>
+                                 </div>
+                              </a>
+                              <a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs">
+                                       <img alt="Lettstart Admin" class="img-fluid rounded-circle" src="assets/images/users/avatar-1.jpg">
+                                    </div>
+                                    <p class="media-body">
+                                       John likes your photo
+                                       <small class="text-muted">5 hours ago</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs">
+                                       <img alt="Lettstart Admin" class="img-fluid rounded-circle" src="assets/images/users/avatar-2.jpg">
+                                    </div>
+                                    <p class="media-body">
+                                       Johnson
+                                       <small class="text-muted">Wow! admin looks good</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-danger">
+                                       <i class="bx bx-server"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       Server getting down
+                                       <small class="text-muted">1 min ago</small>
+                                    </p>
+                                 </div>
+                              </a><a href="javascript:void(0);" class="dropdown-item notification-item">
+                                 <div class="media">
+                                    <div class="avatar avatar-xs bg-info">
+                                       <i class="bx bx-tag"></i>
+                                    </div>
+                                    <p class="media-body">
+                                       Someone tag you
+                                       <small class="text-muted">2 hours ago</small></p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="notify-all">
+                           <a href="javascript: void(0);" class="text-primary text-center p-3">
+                              <small>View All</small>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-inline-flex ml-0 ml-sm-2 dropdown">
+                  <button data-toggle="dropdown" aria-haspopup="true" type="button" id="page-header-profile-dropdown"
+                     aria-expanded="false" class="btn header-item">
+                     <img src="assets/images/users/avatar-1.jpg" alt="Header Avatar" class="avatar avatar-xs mr-0">
+                     <span class="d-none d-xl-inline-block ml-1">Administrator</span>
+                     <i class="bx bx-chevron-down d-none d-xl-inline-block"></i>
+                  </button>
+                  <div aria-labelledby="page-header-profile-dropdown" class="dropdown-menu-right dropdown-menu">
+                     <a href="javascript: void(0);" class="dropdown-item">
+                        <i class="bx bx-user mr-1"></i> Profile
+                     </a>
+                     <a href="/index.html" class="text-danger dropdown-item">
+                        <i class="bx bx-log-in mr-1 text-danger"></i> Logout
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header End -->
+      <!-- Header End -->
+      <!-- Begin Left Navigation -->
+      <!-- Begin Left Navigation -->
+      <aside class="side-navbar">
+         <div class="scroll-content" id="metismenu">
+            <ul id="side-menu" class="metismenu list-unstyled">
+               <li class="side-nav-title side-nav-item menu-title">Dashboard</li>
+               <li>
+                  <a class="side-nav-link" href="../dist/e-guru-dashboard.html">
+                     <i class="bx bx-desktop"></i>
+                     <span> Dashboard</span>
+                  </a>
+               </li>
+               <li class="side-nav-title side-nav-item menu-title">Master Data</li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> Import Data Master</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-unitkerja.html"> Import Unit Kerja </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-skpd.html"> Import SKPD </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-pegawai.html"> Import Pegawai </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-import-tupoksi.html"> Import Tupoksi </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> Kepegawaian</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="../dist/e-guru-master-pegawai.html"> Master Pegawai </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-Jabatan </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-Tusi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Ref-PD </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Mass Reset Password </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-user-circle"></i>
+                     <span> E-Absensi</span>
+                     <span class="menu-arrow"></span>
+                  </a>
+                  <ul aria-expanded="false" class="nav-second-level">
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Pengaturan Shift</a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Rekapitulasi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Laporan Absensi </a>
+                     </li>
+                     <li class="side-nav-item">
+                        <a class="side-nav-link" href="#"> Log </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="../documentation/index.html" target="_blank" class="side-nav-link" aria-expanded="false">
+                     <i class="bx bx-file"></i>
+                     <span> Documentation</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </aside>
+      <!-- Left Navigation End -->
+      <!-- Left Navigation End -->
+      <!-- Begin main content -->
+      <div class="main-content">
+         <!-- content -->
+         <div class="page-content">
+            <!-- page header -->
+            <div class="page-title-box">
+               <div class="container-fluid">
+                  <div class="page-title dflex-between-center">
+                    <h3 class="mb-1 font-weight-bold">Shift & Jam Kerja</h3>
+                  </div>
+               </div>
+            </div>
+            <!-- page content -->
+            <div class="page-content-wrapper mt--45">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="card">
+                        <div class="card-body">
+                           <div class="row">
+                              <div class="col-xl-2 col-lg-3 col-6">
+                              <img src="assets/images/calender.svg" class="mr-4 align-self-center img-fluid " alt="cal" />
+                              </div>
+                              <div class="col-xl-10 col-lg-9">
+                              <div class="mt-4 mt-lg-0">
+                                 <h5 class="mt-0 mb-1 font-weight-bold">Pengaturan Shift & Jam Kerja Pegawai</h5>
+                                 <p class="text-muted mb-2">The calendar shows the events synced from all
+                                    your linked calendars.
+                                    Click on event to see or edit the details. You can create new event by
+                                    clicking on "Create New event" button or any cell available
+                                    in calendar below.</p>
+                                 <button class="btn btn-primary mt-2" data-effect="wave" id="btn-new-event"
+                                    data-toggle="modal" data-target="#shift_new"><i class="uil-plus-circle"></i>
+                                    Buat Shift Baru</button>
+                              </div>
+                              </div>
+                           </div>
+                        </div> <!-- end card body-->
+                        </div> <!-- end card -->
+                     </div>
+                     <!-- end col-12 -->
+                  </div>
+
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                           <div class="responsive-table-plugin">
+                              <div class="table-rep-plugin">
+                                <div class="table-responsive" data-pattern="priority-columns">
+                                  <table id="tech-companies-1" class="table table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th>No</th>
+                                        <th data-priority="1">Nama Shift</th>
+                                        <th data-priority="3">Jam Masuk</th>
+                                        <th data-priority="1">Jam Pulang</th>
+                                        <th data-priority="3">Status</th>
+                                        <th data-priority="3">Aksi</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th>1 </th>
+                                        <td>Shift Pagi</td>
+                                        <td>07:15 AM</td>
+                                        <td>14:25 PM</td>
+                                        <td><span class="badge badge-success"> active</span></td>
+                                        <td>
+                                          <span type="button" id="btn-new-event" data-toggle="modal" data-target="#shift_new" class="badge badge-success"> 
+                                             <i class="bx bx-edit fs-sm"></i>
+                                          </span>
+                                          <span class="badge badge-danger"> <i class="bx bx-trash fs-sm"></i></span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>2 </th>
+                                        <td>Shift Sore</td>
+                                        <td>14:25 PM</td>
+                                        <td>22:25 PM</td>
+                                        <td><span class="badge badge-success"> active</span></td>
+                                        <td>
+                                          <span type="button" id="btn-new-event" data-toggle="modal" data-target="#shift_new" class="badge badge-success"> 
+                                             <i class="bx bx-edit fs-sm"></i>
+                                          </span>
+                                          <span class="badge badge-danger"> <i class="bx bx-trash fs-sm"></i></span>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th>3 </th>
+                                        <td>Shift Malam</td>
+                                        <td>22:25 AM</td>
+                                        <td>07:15 AM</td>
+                                        <td><span class="badge badge-success"> active</span></td>
+                                        <td>
+                                          <span type="button" id="btn-new-event" data-toggle="modal" data-target="#shift_new" class="badge badge-success"> 
+                                             <i class="bx bx-edit fs-sm"></i>
+                                          </span>
+                                          <span class="badge badge-danger"> <i class="bx bx-trash fs-sm"></i></span>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div> <!-- end .table-responsive -->
+          
+                              </div> <!-- end .table-rep-plugin-->
+                            </div> <!-- end .responsive-table-plugin-->
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Modal Tambah Shift-->
+            <div class="modal fade" id="shift_new" tabindex="-1" role="dialog"
+               aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h4 class="modal-title strong" id="myLargeModalLabel">Tambah Shift Baru</h4>
+                  </div>
+                  <div class="modal-body">
+                     <form action="#">
+                        <div class="row">
+                           <div class="col-12">
+                              <div class="form-group">
+                                 <label for="shift">Nama Shift</label>
+                                 <input type="text" id="shift" name="shift" class="form-control"
+                                   placeholder="Nama Shift">
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                 <label for="jm">Jam Masuk</label>
+                                 <input type="time" id="jm" name="jam_masuk" class="form-control"
+                                   placeholder="Jam Masuk">
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                 <label for="jm">Jam Pulang</label>
+                                 <input type="time" id="jm" name="jam_pulang" class="form-control"
+                                   placeholder="Jam Pulang">
+                               </div>
+                           </div>
+                        </div>
+                        <div class="row mb-5">
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Senin">
+                                 <label class="custom-control-label" for="Senin">Senin</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Selasa">
+                                 <label class="custom-control-label" for="Selasa">Selasa</label>
+                               </div>
+                           </div>
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Rabu">
+                                 <label class="custom-control-label" for="Rabu">Rabu</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Kamis">
+                                 <label class="custom-control-label" for="Kamis">Kamis</label>
+                               </div>
+                           </div>
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Jumat">
+                                 <label class="custom-control-label" for="Jumat">Jumat</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Sabtu">
+                                 <label class="custom-control-label" for="Sabtu">Sabtu</label>
+                               </div>
+                           </div>
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Minggu">
+                                 <label class="custom-control-label" for="Minggu">Minggu</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Flag">
+                                 <label class="custom-control-label" for="Flag">Flag</label>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="text-right border-top pt-3">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Simpan</button>
+                        </div>
+                     </form>
+                  </div>
+               </div><!-- /.modal-content -->
+               </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <!-- Modal Edit Shift-->
+            <div class="modal fade" id="shift_edit" tabindex="-1" role="dialog"
+               aria-labelledby="myLargeModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered modal-lg">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h4 class="modal-title strong" id="myLargeModalLabel">Tambah Shift Baru</h4>
+                  </div>
+                  <div class="modal-body">
+                     <form action="#">
+                        <div class="row">
+                           <div class="col-12">
+                              <div class="form-group">
+                                 <label for="shift">Nama Shift</label>
+                                 <input type="text" id="shift" name="shift" class="form-control"
+                                   placeholder="Nama Shift">
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                 <label for="jm">Jam Masuk</label>
+                                 <input type="time" id="jm" name="jam_masuk" class="form-control"
+                                   placeholder="Jam Masuk">
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-6">
+                              <div class="form-group">
+                                 <label for="jm">Jam Pulang</label>
+                                 <input type="time" id="jm" name="jam_pulang" class="form-control"
+                                   placeholder="Jam Pulang">
+                               </div>
+                           </div>
+                        </div>
+                        <div class="row mb-5">
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Senin">
+                                 <label class="custom-control-label" for="Senin">Senin</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Selasa">
+                                 <label class="custom-control-label" for="Selasa">Selasa</label>
+                               </div>
+                           </div>
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Rabu">
+                                 <label class="custom-control-label" for="Rabu">Rabu</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Kamis">
+                                 <label class="custom-control-label" for="Kamis">Kamis</label>
+                               </div>
+                           </div>
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Jumat">
+                                 <label class="custom-control-label" for="Jumat">Jumat</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Sabtu">
+                                 <label class="custom-control-label" for="Sabtu">Sabtu</label>
+                               </div>
+                           </div>
+                           <div class="col-6 col-md-3">
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Minggu">
+                                 <label class="custom-control-label" for="Minggu">Minggu</label>
+                               </div>
+                              <div class="custom-control custom-switch">
+                                 <input type="checkbox" class="custom-control-input" id="Flag">
+                                 <label class="custom-control-label" for="Flag">Flag</label>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="text-right border-top pt-3">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
+                           <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Simpan</button>
+                        </div>
+                     </form>
+                  </div>
+               </div><!-- /.modal-content -->
+               </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+         </div>
+      </div>
+
+      <!-- main content End -->
+      <!-- footer -->
+      <!-- footer -->
+      <footer class="footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-6 mb-1 mb-md-0">
+                  <span>2023 &copy; e-Office Guru Kab. Ogan Ilir.</span>
+               </div>
+               <div class="col-md-6 text-md-right">
+                  <span>Develop By <span class="text-primary font-weight-500">Pusdatin | Diskominfo Kab. Ogan Ilir</span></span>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <div class="setting-sidebar">
+         <div class="card mb-0">
+            <div class="card-header">
+               <h5 class="card-title dflex-between-center">
+                  Layouts
+                  <a href="javascript:void(0)"><i class="mdi mdi-close fs-sm"></i></a>
+               </h5>
+            </div>
+            <div class="card-body">
+               <div class="layout">
+                  <a href="index-horizontal.html">
+                     <img src="assets/images/horizontal.png" alt="Lettstart Admin" class="img-fluid"/>
+                     <h6 class="font-size-16">Horizontal Layout</h6>
+                  </a>
+               </div>
+               <div class="layout">
+                  <a href="index.html">
+                     <img src="assets/images/vertical.png" alt="Lettstart Admin" class="img-fluid" />
+                     <h6 class="font-size-16">Vertical Layout</h6>
+                  </a>
+               </div>
+               <div class="layout">
+                  <a href="layout-dark-sidebar.html">
+                     <img src="assets/images/dark.png" alt="Lettstart Admin" class="img-fluid" />
+                     <h6 class="font-size-16">Dark Sidebar</h6>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Page End -->
+   <!-- ================== BEGIN BASE JS ================== -->
+   <script src="assets/js/vendor.min.js"></script>
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+   <script src="assets/libs/flatpicker/js/flatpickr.js"></script>
+   <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+   <script src="assets/libs/chartjs/js/Chart.bundle.min.js"></script>
+   <script src="assets/js/utils/colors.js"></script>
+   <script src="assets/js/pages/dashboard.init.js"></script>
+   <script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.responsive.min.js"></script>
+   <script src="assets/libs/datatables/js/responsive.bootstrap4.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.keyTable.min.js"></script>
+   <script src="assets/libs/datatables/js/dataTables.select.min.js"></script>
+   <script src="assets/js/pages/project-list.init.js"></script>
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/app.js"></script>
+   <!-- ================== END PAGE JS ================== -->
+</body>
+
+</html>

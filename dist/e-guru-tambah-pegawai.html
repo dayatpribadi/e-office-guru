@@ -340,7 +340,7 @@
                                           <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
                                              data-placeholder="Choose ...">
                                              <option value="AK">Guru Madya Mata Pelajaran Bahasa Indonesia</option>
-                                             <option value="HI">Guru Pratama Mata Pelajaran IPA Terpadu</option>
+                                             <option value="HI">Guru Pertama Mata Pelajaran IPA Terpadu</option>
                                              <option value="HI">Guru Ahli Muda Mata Pelajaran IPS</option>
                                           </select>
 														<div class="validation-error d-none font-size-13">
@@ -348,6 +348,22 @@
 														</div>
 													</div> 
 												</div>
+												<div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+														<label for="pangkat">Jenis Jabatan <span class="text-danger">* (Untuk Tupoksi)</span></label>
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="AK">Guru Madya Mata Pelajaran Bahasa Indonesia</option>
+                                             <option value="HI">Guru Pertama Mata Pelajaran IPA Terpadu</option>
+                                             <option value="HI">Guru Ahli Muda Mata Pelajaran IPS</option>
+                                          </select>
+														<div class="validation-error d-none font-size-13">
+															Designation can not be blank.
+														</div>
+													</div> 
+												</div>
+                                 </div>
+                                 <div class="row">
                                     <div class="col-md-6">
                                        <div class="form-group floating-label enable-floating-label show-label">
 														<label for="pangkat">Jenis Pegawai<span class="text-danger">*</span></label>
@@ -361,16 +377,121 @@
 														</div>
 													</div>             
                                      </div> <!-- end col -->
-											</div>
-											<div class="row mb-4">
-                                    <div class="col-lg-6">
-                                       <div class="switchery-demo">
-                                         <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2"
-                                           data-size="small" />
-                                          <span class="ml-3">Kepala Satuan Pendidikan</span>
+                                    <div class="col-md-6">
+                                       <div class="row">
+                                          <div class="col-md-6">
+                                             <div class="switchery-demo">
+                                               <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2"
+                                                 data-size="small" />
+                                                <span class="ml-3">Kepala Satuan Pendidikan</span>
+                                             </div>
+                                           </div>
+                                          <div class="col-md-6">
+                                             <div class="switchery-demo">
+                                               <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2"
+                                                 data-size="small" />
+                                                <span class="ml-3">Sertifikasi</span>
+                                             </div>
+                                           </div>
                                        </div>
-                                     </div>
-											</div>
+                                     </div> <!-- end col -->
+                                 </div>
+
+                                 <div class="mt-3 pt-2 border-top">
+                                    <h5 class="mb-4 pt-2 font-weight-600">Informasi Tambahan</h5>
+                                    <div class="row mt-2">
+                                       <div class="col-lg-6">
+                                          <div class="form-group floating-label enable-floating-label show-label">
+                                             <input class="form-control" id="NIK" name="validation-designation" type="text"
+                                                placeholder="1610040404200001">
+                                             <label for="NIK">Pangkat<span class="text-danger">*</span></label>
+                                             <div class="validation-error d-none font-size-13">
+                                                Designation can not be blank.
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="form-group floating-label enable-floating-label show-label">
+                                             <input class="form-control" id="wa" name="validation-email" type="text"
+                                                placeholder="+62821****0101">
+                                             <label for="wa">No. Whatsapp<span class="text-danger">* (Untuk Notifikasi)</span></label>
+                                             <div class="validation-error d-none font-size-13">
+                                                Please enter valid Phone Number
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-lg-6">
+                                          <div class="form-group floating-label enable-floating-label show-label">
+                                             <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                                data-placeholder="Choose ...">
+                                                <option value="Islam">Islam</option>
+                                                <option value="Protestan">Protestan</option>
+                                                <option value="Katolik">Katolik</option>
+                                                <option value="Hindu">Hindu</option>
+                                                <option value="Budha">Budha</option>
+                                                <option value="Konghucu">Konghucu</option>
+                                             </select>
+                                             <label for="agama">Agama<span class="text-danger">*</span></label>
+                                             <div class="validation-error d-none font-size-13">
+                                                Designation can not be blank.
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="form-group floating-label enable-floating-label show-label">
+                                             <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                                data-placeholder="Choose ...">
+                                                <option value="SD">SD</option>
+                                                <option value="SMP">SMP</option>
+                                                <option value="SMA">SMA</option>
+                                                <option value="DII">DII</option>
+                                                <option value="DIII">DIII</option>
+                                                <option value="DIV">DIV</option>
+                                                <option value="S1">S1</option>
+                                                <option value="S2">S2</option>
+                                                <option value="S3">S3</option>
+                                             </select>
+                                             <label for="pendidikan">Pendidikan Terakhir<span class="text-danger">*</span></label>
+                                             <div class="validation-error d-none font-size-13">
+                                                Designation can not be blank.
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-lg-6">
+                                          <div class="form-group floating-label enable-floating-label show-label">
+                                             <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                                data-placeholder="Choose ...">
+                                                <option value="IPA">IPA</option>
+                                                <option value="IPS">IPS</option>
+                                                <option value="MATEMATIKA">MATEMATIKA</option>]
+                                             </select>
+                                             <label for="agama">Jurusan<span class="text-danger">*</span></label>
+                                             <div class="validation-error d-none font-size-13">
+                                                Designation can not be blank.
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-6">
+                                          <div class="form-group floating-label enable-floating-label show-label">
+                                             <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                                data-placeholder="Choose ...">
+                                                <option value="Islam">S.Pd</option>
+                                                <option value="Protestan">M.Pd</option>
+                                                <option value="Katolik">Drs/Dra</option>
+                                             </select>
+                                             <label for="pendidikan">Gelar Akademik<span class="text-danger">*</span></label>
+                                             <div class="validation-error d-none font-size-13">
+                                                Designation can not be blank.
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
                                  <div class="clearfix float-right">
 												<button class="btn btn-secondary" data-effect="wave" type="button"
 													id="reset-profile-form">Back</button>
@@ -449,7 +570,6 @@
    <script src="assets/libs/devbridge-autocomplete/jquery.autocomplete.min.js"></script>
    <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
    <script src="assets/libs/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
- 
    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
   <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
   <script src="assets/libs/dropify/js/dropify.min.js"></script>
