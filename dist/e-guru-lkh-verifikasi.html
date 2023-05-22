@@ -26,6 +26,7 @@
    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" />
    <link href="assets/libs/dropify/css/dropify.min.css" rel="stylesheet" />
    <link href="assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+   <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
    <!-- ================== BEGIN PAGE LEVEL END ================== -->
    <!-- ================== BEGIN APP CSS  ================== -->
    <link rel="stylesheet" href="assets/css/bootstrap.css" />
@@ -241,7 +242,7 @@
             <div class="page-title-box">
                <div class="container-fluid">
                   <div class="page-title dflex-between-center">
-                    <h3 class="mb-1 font-weight-bold">Input Laporan</h3>
+                    <h3 class="mb-1 font-weight-bold">Verifikasi LKH</h3>
                   </div>
                </div>
             </div>
@@ -255,17 +256,37 @@
                            <div class="col-12">
                               <form>
                                  <div class="form-row justify-content-between align-items-center">
-                                    <div class="col-12 col-md-2">
-                                       <button type="button" class="btn btn-primary waves-effect waves-light my-2" data-toggle="modal" data-target="#tambahLKH"><i class="bx bx-plus"></i> Tambah LKH</button>
-                                    </div>
-                                    <div class="col-12 col-md-4">
+                                    <div class="col-12 col-md-3">
                                        <div class="form-group">
-                                          <label for="example-email">Tanggal LKH</label>
+                                          <label for="pegawai">Pilih Pegawai<span class="text-danger">*</span></label>
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="YK">Yofi Kur</option>
+                                             <option value="AT">Ariel Tatum</option>
+                                             <option value="AT">Sigi Wimala</option>
+                                             <option value="AT">Riyani Jangkaru</option>
+                                             <option value="AT">Maria Ozawa</option>
+                                          </select>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
+                                          </div>
+                                       </div>     
+                                    </div>
+                                    <div class="col-12 col-md-2">
+                                       <div class="form-group">
+                                          <label for="example-email">Mulai Tanggal</label>
                                           <input type="datetime-local" id="example-email" name="example-email" class="form-control"
                                           placeholder="23 Mei 2023">
                                        </div>
                                     </div>
-                                    <div class="col-12 col-md-4">
+                                    <div class="col-12 col-md-2">
+                                       <div class="form-group">
+                                          <label for="example-email">Sampai Tanggal</label>
+                                          <input type="datetime-local" id="example-email" name="example-email" class="form-control"
+                                          placeholder="23 Mei 2023">
+                                       </div>
+                                    </div>
+                                    <div class="col-12 col-md-3">
                                        <div class="form-group">
                                           <label for="example-select">Status</label>
                                           <select class="form-control" id="example-select">
@@ -293,13 +314,9 @@
                                  <h5 class="card-title">Laporan Kinerja Harian</h5>
                               </div>
                               <div class="col-12 col-md-6 text-md-right">
-                                 <a href="#" class="btn btn-primary" data-effect="wave">
+                                 <a href="#" class="btn btn-success" data-effect="wave">
                                     <i class="bx bx-down-arrow-circle bx-flashing"></i>
-                                    Download Rekap LKH
-                                 </a>
-                                 <a href="#" class="btn btn-danger" data-effect="wave">
-                                    <i class="bx bx-trash bx-flashing"></i>
-                                    Hapus Data Terpilih
+                                    Verifikasi LKH Terpilih
                                  </a>
                               </div>
                            </div>
@@ -332,9 +349,10 @@
                                  <td><span class="badge badge-warning">Belum diverifikasi</span></td>
                                  <td>
                                     <span type="button" id="btn-new-event" data-toggle="modal" data-target="#editLKH" class="badge badge-success"> 
-                                       <i class="bx bx-edit fs-sm"></i>
+                                       <i class="bx bx-show fs-sm"></i>
                                     </span>
-                                    <span class="badge badge-danger"> <i class="bx bx-trash fs-sm"></i></span>
+                                    <span  type="button" class="badge badge-primary"> <i class="bx bx-check fs-sm"></i></span>
+                                    <span type="button" class="badge badge-danger" data-toggle="modal" data-target="#modalTolak"> <i class="bx bx-x fs-sm"></i></span>
                                   </td>
                                </tr>
                                <tr>
@@ -347,9 +365,10 @@
                                  <td><span class="badge badge-warning">Belum diverifikasi</span></td>
                                  <td>
                                     <span type="button" id="btn-new-event" data-toggle="modal" data-target="#editLKH" class="badge badge-success"> 
-                                       <i class="bx bx-edit fs-sm"></i>
+                                       <i class="bx bx-show fs-sm"></i>
                                     </span>
-                                    <span class="badge badge-danger"> <i class="bx bx-trash fs-sm"></i></span>
+                                    <span type="button" id="sa-importpegawai" class="badge badge-primary"> <i class="bx bx-check fs-sm"></i></span>
+                                    <span type="button" class="badge badge-danger" data-toggle="modal" data-target="#modalTolak"> <i class="bx bx-x fs-sm"></i></span>
                                   </td>
                                </tr>
                              </tbody>
@@ -366,115 +385,13 @@
       </div>
       <!-- main content End -->
 
-      <!-- Modal Input LKH -->
-      <!-- Center modal content -->
-      <div class="modal fade" id="tambahLKH" tabindex="-1" role="dialog" aria-hidden="true">
-         <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-               <div class="modal-header">
-               <h4 class="modal-title" id="myCenterModalLabel">Tambah LKH</h4>
-               <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
-               </div>
-               <div class="modal-body">
-                  <form action="#">
-                     <div class="row">
-                        <div class="col-12">
-                           <div class="form-group floating-label enable-floating-label show-label">
-                              <input class="form-control" id="tgl-awal" name="validation-designation" type="date"
-                                 placeholder="tgl-awal">
-                              <label for="tgl-awal">Tanggal<span class="text-danger">*</span></label>
-                              <div class="validation-error d-none font-size-13">
-                                 Designation can not be blank.
-                              </div>
-                           </div>   
-                        </div>
-                        <div class="col-12">
-                           <div class="form-group floating-label enable-floating-label show-label">
-                              <label for="pegawai">Tugas & Fungsi<span class="text-danger">*</span></label>
-                              <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
-                                 data-placeholder="Choose ...">
-                                 <option value="YK">Lorem ipsum dolor sit amet.</option>
-                                 <option value="AT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ratione?</option>
-                                 <option value="AT">Lorem ipsum dolor sit amet consectetur adipisicing.</option>
-                                 <option value="AT">Lorem, ipsum dolor.</option>
-                                 <option value="AT">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</option>
-                              </select>
-                              <div class="validation-error d-none font-size-13">
-                                 Designation can not be blank.
-                              </div>
-                           </div>     
-                        </div>
-                        <div class="col-12 mb-4">
-                           <label class="mb-1 font-weight-medium text-muted">Uraian</label>
-                           <textarea id="textarea" class="form-control" maxlength="500" rows="3"
-                           placeholder="This textarea has a limit of 500 chars."></textarea>
-                        </div>
-                        <div class="col-12 col-md-6">
-                           <div class="form-group floating-label enable-floating-label show-label">
-                              <input class="form-control" id="tgl-awal" name="validation-designation" type="time"
-                                 placeholder="tgl-awal">
-                              <label for="tgl-awal">Jam Mulai Mengajar<span class="text-danger">*</span></label>
-                              <div class="validation-error d-none font-size-13">
-                                 Designation can not be blank.
-                              </div>
-                           </div>   
-                        </div>
-                        <div class="col-12 col-md-6">
-                           <div class="form-group floating-label enable-floating-label show-label">
-                              <input class="form-control" id="tgl-akhir" name="validation-designation" type="time"
-                                 placeholder="tgl-akhir">
-                              <label for="tgl-akhir">Jam Selesai Mengajar<span class="text-danger">*</span></label>
-                              <div class="validation-error d-none font-size-13">
-                                 Designation can not be blank.
-                              </div>
-                           </div>   
-                        </div>
-                        <div class="col-12">
-                           <label class="mb-1 font-weight-medium text-muted">Output/Harian</label>
-                           <textarea id="textarea" class="form-control" maxlength="500" rows="3"
-                           placeholder="This textarea has a limit of 500 chars."></textarea>
-                        </div>
-
-                        <div class="col-12">
-                           <div class="mt-3">
-                              <label class="mb-1 font-weight-medium text-muted">Bukti</label>
-                           <input type="file" data-plugins="dropify" data-max-file-size="1M" />
-                           <p class="text-danger text-center mt-2 mb-0">Max File size : 2Mb | Tipe File Upload : JPEG, PNG, JPG</p>
-                           </div>
-                        </div>
-                        <div class="col-12 mt-4">
-                           <div class="form-group floating-label enable-floating-label show-label">
-                              <label for="pegawai">Verifikator<span class="text-danger">*</span></label>
-                              <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
-                                 data-placeholder="Choose ...">
-                                 <option value="YK">Ahmad</option>
-                                 <option value="AT">Muhammad</option>
-                                 <option value="AT">Abdullah</option>
-                                 <option value="AT">Rasyid</option>
-                              </select>
-                              <div class="validation-error d-none font-size-13">
-                                 Designation can not be blank.
-                              </div>
-                           </div>     
-                        </div>
-                     </div>
-                     <div class="text-right">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Tambah</button>
-                     </div>
-                  </form>
-               </div>
-            </div><!-- /.modal-content -->
-         </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
       <!-- Modal Edit LKH -->
       <!-- Center modal content -->
       <div class="modal fade" id="editLKH" tabindex="-1" role="dialog" aria-hidden="true">
          <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                <div class="modal-header">
-               <h4 class="modal-title" id="myCenterModalLabel">Edit LKH</h4>
+               <h4 class="modal-title" id="myCenterModalLabel">Detail LKH</h4>
                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
                </div>
                <div class="modal-body">
@@ -560,9 +477,37 @@
                            </div>     
                         </div>
                      </div>
-                     <div class="text-right">
+                     <!-- <div class="text-right">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Tambah</button>
+                     </div> -->
+                  </form>
+               </div>
+            </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- Center modal content -->
+      <div class="modal fade" id="modalTolak" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+               <h4 class="modal-title" id="myCenterModalLabel">Tolak LKH</h4>
+               <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+               </div>
+               <div class="modal-body">
+                  <form action="#">
+                     <div class="row">
+                        <div class="col-12">
+                           <label class="mb-1 font-weight-medium text-muted">Catatan Penolakan</label>
+                           <textarea id="textarea" class="form-control" maxlength="500" rows="3"
+                           placeholder="This textarea has a limit of 500 chars."></textarea>
+                        </div>
+
+                     </div>
+                     <div class="text-right mt-3">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Simpan</button>
                      </div>
                   </form>
                </div>
@@ -637,8 +582,10 @@
    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
   <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
   <script src="assets/libs/dropify/js/dropify.min.js"></script>
-  <!-- ================== END PAGE LEVEL JS ================== -->
-  <!-- ================== BEGIN PAGE JS ================== -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweet-alerts.init.js"></script>
   <script src="assets/js/pages/form-fileuploads.init.js"></script>
   <script src="assets/js/pages/form-advanced.init.js"></script>
   <script src="assets/js/pages/bootstrap-tables.init.js"></script>
