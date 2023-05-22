@@ -273,35 +273,31 @@
                                  <div class="collapse show">
                                    <div class="d-flex flex-wrap my-3">
                                     <div class="flex-fill mt-2 mr-2">
-                                      <button type="button" class="btn btn-primary btn-block" data-effect="wave">
+                                      <button type="button" class="btn btn-primary btn-block" data-effect="wave" data-toggle="modal"
+                                      data-target="#edit-pegawai">
                                         <i class="bx bx-pencil mr-2"></i> Edit Pegawai
                                       </button>
                                     </div>
                                     <div class="flex-fill mt-2 mr-2">
-                                      <button type="button" class="btn btn-warning btn-block waves-effectwaves-light">
-                                        <i class="bx bx-refresh mr-2"></i>Reset Token
-                                      </button>
+                                       <button type="button" class="btn btn-warning btn-block" data-effect="wave">
+                                         <i class="bx bx-refresh mr-2"></i> Reset Password
+                                       </button>
                                     </div>
                                     <div class="flex-fill mt-2 mr-2">
-                                      <button type="button" class="btn btn-warning btn-block" data-effect="wave">
-                                        <i class="bx bx-refresh mr-2"></i> Reset Password
-                                      </button>
-                                    </div>
-                                    <div class="flex-fill mt-2 mr-2">
-                                      <button type="button" class="btn btn-danger btn-block waves-effectwaves-light">
-                                        <i class="bx bxs-user-x mr-2"></i>Hapus Akun
-                                      </button>
-                                    </div>
-                                    <div class="flex-fill mt-2 mr-2">
-                                      <button type="button" class="btn btn-success btn-block" data-effect="wave">
-                                        <i class="bx bx-user-minus mr-2"></i> Pensiunkan Pegawai
-                                      </button>
-                                    </div>
-                                    <div class="flex-fill mt-2 mr-2">
-                                      <button type="button" class="btn btn-danger btn-block waves-effectwaves-light">
-                                        <i class="bx bx-user-minus mr-2"></i>Hapus Pegawai
-                                      </button>
-                                    </div>
+                                       <button type="button" class="btn btn-danger btn-block waves-effectwaves-light">
+                                         <i class="bx bxs-user-x mr-2"></i>Hapus Akun
+                                       </button>
+                                     </div>
+                                     <div class="flex-fill mt-2 mr-2">
+                                       <button type="button" class="btn btn-success btn-block" data-effect="wave">
+                                         <i class="bx bx-user-minus mr-2"></i> Pensiunkan Pegawai
+                                       </button>
+                                     </div>
+                                     <div class="flex-fill mt-2 mr-2">
+                                       <button type="button" class="btn btn-danger btn-block waves-effectwaves-light">
+                                         <i class="bx bx-user-minus mr-2"></i>Hapus Pegawai
+                                       </button>
+                                     </div>
                                   </div>
                                   
                                    <table class="table mb-0 table-bordered table-sm">
@@ -683,6 +679,276 @@
          </div>
       </div>
       <!-- main content End -->
+
+      <!-- Modal Edit Pegawai -->
+      <!-- Center modal content -->
+      <div class="modal fade" id="edit-pegawai" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="myCenterModalLabel">Edit Data Pegawai</h4>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-lg-4 col-xl-3">
+                     <div class="card">
+                        <div class="card-body">
+                           <div class="mt-3">
+                              <input type="file" data-plugins="dropify" data-default-file="assets/images/users/user-guru.jpg" />
+                              <p class="text-muted text-center mt-2 mb-0">Foto Pegawai</p>
+                            </div>      
+                        </div> <!-- end card-body-->
+                      </div> <!-- end card-->
+                     <!-- end card -->
+                  </div>
+                  <div class="col-lg-8 col-xl-9">
+                     <div class="card">
+                        <div class="card-body my-3">
+                           <form action="#" novalidate="novalidate" id="addprofileform">
+                              <div class="row pt-4">
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <input class="form-control" id="fname" name="validation-firstname" type="text"
+                                          placeholder="Nama Lengkap">
+                                       <label for="fname">Nama Lengkap<span class="text-danger">*</span></label>
+                                       <div class="validation-error d-none font-size-13">
+                                          First name can not be blank.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <input class="form-control" id="lname" name="validation-lastname" type="text"
+                                          placeholder="1610******00001">
+                                       <label for="lname">NIP/NUPTK/Peg-ID</label>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <input class="form-control" id="pangkat" name="validation-designation" type="text"
+                                          placeholder="Penata">
+                                       <label for="pangkat">Pangkat<span class="text-danger">*</span></label>
+                                       <div class="validation-error d-none font-size-13">
+                                          Designation can not be blank.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <input class="form-control" id="golongan" name="validation-email" type="text"
+                                          placeholder="III/c">
+                                       <label for="golongan">Golongan<span class="text-danger">*</span></label>
+                                       <div class="validation-error d-none font-size-13">
+                                          Please enter valid Email
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <label for="pangkat">Perangkat Daerah<span class="text-danger">*</span></label>
+                                       <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                          data-placeholder="Choose ...">
+                                          <option value="AK">Dinas Pendidikan dan Kebudayaan</option>
+                                          <option value="HI">Badan Pendapatan Daerah</option>
+                                       </select>
+                                       <div class="validation-error d-none font-size-13">
+                                          Designation can not be blank.
+                                       </div>
+                                    </div> 
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <label for="pangkat">Satuan Pendidikan<span class="text-danger">*</span></label>
+                                       <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                          data-placeholder="Choose ...">
+                                          <option value="AK">TK Pertiwi</option>
+                                          <option value="HI">SD Pertiwi</option>
+                                          <option value="HI">SMP Pertiwi</option>
+                                       </select>
+                                       <div class="validation-error d-none font-size-13">
+                                          Designation can not be blank.
+                                       </div>
+                                    </div>             
+                                  </div> <!-- end col -->
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <label for="pangkat">Jabatan<span class="text-danger">*</span></label>
+                                       <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                          data-placeholder="Choose ...">
+                                          <option value="AK">Guru Madya Mata Pelajaran Bahasa Indonesia</option>
+                                          <option value="HI">Guru Pertama Mata Pelajaran IPA Terpadu</option>
+                                          <option value="HI">Guru Ahli Muda Mata Pelajaran IPS</option>
+                                       </select>
+                                       <div class="validation-error d-none font-size-13">
+                                          Designation can not be blank.
+                                       </div>
+                                    </div> 
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <label for="pangkat">Jenis Jabatan <span class="text-danger">* (Untuk Tupoksi)</span></label>
+                                       <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                          data-placeholder="Choose ...">
+                                          <option value="AK">Guru Madya Mata Pelajaran Bahasa Indonesia</option>
+                                          <option value="HI">Guru Pertama Mata Pelajaran IPA Terpadu</option>
+                                          <option value="HI">Guru Ahli Muda Mata Pelajaran IPS</option>
+                                       </select>
+                                       <div class="validation-error d-none font-size-13">
+                                          Designation can not be blank.
+                                       </div>
+                                    </div> 
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-group floating-label enable-floating-label show-label">
+                                       <label for="pangkat">Jenis Pegawai<span class="text-danger">*</span></label>
+                                       <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                          data-placeholder="Choose ...">
+                                          <option value="AK">Kepala</option>
+                                          <option value="HI">Staff</option>
+                                       </select>
+                                       <div class="validation-error d-none font-size-13">
+                                          Designation can not be blank.
+                                       </div>
+                                    </div>             
+                                  </div> <!-- end col -->
+                              </div>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="switchery-demo">
+                                      <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2"
+                                        data-size="small" />
+                                       <span class="ml-3">Kepala Satuan Pendidikan</span>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-6">
+                                    <div class="switchery-demo">
+                                       <input type="checkbox" checked data-plugin="switchery" data-color="#64b0f2"
+                                          data-size="small" />
+                                       <span class="ml-3">Sertifikasi</span>
+                                    </div>
+                                  </div> <!-- end col -->
+                              </div>
+
+                              <div class="mt-4 pt-2 border-top">
+                                 <h5 class="mb-4 pt-2 font-weight-600">Informasi Tambahan</h5>
+                                 <div class="row mt-2">
+                                    <div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+                                          <input class="form-control" id="NIK" name="validation-designation" type="text"
+                                             placeholder="1610040404200001">
+                                          <label for="NIK">Pangkat<span class="text-danger">*</span></label>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+                                          <input class="form-control" id="wa" name="validation-email" type="text"
+                                             placeholder="+62821****0101">
+                                          <label for="wa">No. Whatsapp<span class="text-danger">* (Untuk Notifikasi)</span></label>
+                                          <div class="validation-error d-none font-size-13">
+                                             Please enter valid Phone Number
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="Islam">Islam</option>
+                                             <option value="Protestan">Protestan</option>
+                                             <option value="Katolik">Katolik</option>
+                                             <option value="Hindu">Hindu</option>
+                                             <option value="Budha">Budha</option>
+                                             <option value="Konghucu">Konghucu</option>
+                                          </select>
+                                          <label for="agama">Agama<span class="text-danger">*</span></label>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="SD">SD</option>
+                                             <option value="SMP">SMP</option>
+                                             <option value="SMA">SMA</option>
+                                             <option value="DII">DII</option>
+                                             <option value="DIII">DIII</option>
+                                             <option value="DIV">DIV</option>
+                                             <option value="S1">S1</option>
+                                             <option value="S2">S2</option>
+                                             <option value="S3">S3</option>
+                                          </select>
+                                          <label for="pendidikan">Pendidikan Terakhir<span class="text-danger">*</span></label>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="IPA">IPA</option>
+                                             <option value="IPS">IPS</option>
+                                             <option value="MATEMATIKA">MATEMATIKA</option>]
+                                          </select>
+                                          <label for="agama">Jurusan<span class="text-danger">*</span></label>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                       <div class="form-group floating-label enable-floating-label show-label">
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="Islam">S.Pd</option>
+                                             <option value="Protestan">M.Pd</option>
+                                             <option value="Katolik">Drs/Dra</option>
+                                          </select>
+                                          <label for="pendidikan">Gelar Akademik<span class="text-danger">*</span></label>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="clearfix float-right">
+                                 <button class="btn btn-secondary" data-effect="wave" type="button"
+                                    id="reset-profile-form">Back</button>
+                                 <button class="btn btn-primary ml-1" data-effect="wave" type="submit">Submit</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <!-- end card -->
+                  </div>
+               </div>
+            </div>
+            <!-- <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Simpan</button> -->
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
       <!-- footer -->
       <!-- footer -->
       <footer class="footer">
