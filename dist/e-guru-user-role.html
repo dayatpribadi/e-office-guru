@@ -10,7 +10,7 @@
      content="admin, panels, dashboard, admin panel, multipurpose, bootstrap, bootstrap4, all type of dashboards">
    <meta name="author" content="MatrrDigital">
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>E-Office Guru | Rekap Absen</title>
+   <title>Member Grid | Letstart - Responsive Admin Dashboard Template</title>
    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 
    <!-- ================== BEGIN PAGE LEVEL CSS START ================== -->
@@ -18,12 +18,11 @@
    <link rel="stylesheet" href="assets/libs/wave-effect/css/waves.min.css" />
    <link rel="stylesheet" href="assets/libs/owl-carousel/css/owl.carousel.min.css" />
    <!-- ================== BEGIN PAGE LEVEL END ================== -->
-   <!-- ================== Plugins CSS  ================== -->
-   <link rel="stylesheet" href="assets/libs/flatpicker/css/flatpickr.min.css">
-   <link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-   <link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-   <link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-   <!-- ================== Plugins CSS ================== -->
+      <!-- ================== Plugins CSS  ================== -->
+      <link href="assets/libs/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/libs/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/libs/datatables/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
    <!-- ================== BEGIN APP CSS  ================== -->
    <link rel="stylesheet" href="assets/css/bootstrap.css" />
    <link rel="stylesheet" href="assets/css/styles.css" />
@@ -194,28 +193,7 @@
                      <span> Dashboard</span>
                   </a>
                </li>
-               <li class="side-nav-title side-nav-item menu-title">Master Data</li>
-               <li>
-                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
-                     <i class="bx bx-user-circle"></i>
-                     <span> Import Data Master</span>
-                     <span class="menu-arrow"></span>
-                  </a>
-                  <ul aria-expanded="false" class="nav-second-level">
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="../dist/e-guru-import-unitkerja.html"> Import Unit Kerja </a>
-                     </li>
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="../dist/e-guru-import-skpd.html"> Import SKPD </a>
-                     </li>
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="../dist/e-guru-import-pegawai.html"> Import Pegawai </a>
-                     </li>
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="../dist/e-guru-import-tupoksi.html"> Import Tupoksi </a>
-                     </li>
-                  </ul>
-               </li>
+               <li class="side-nav-title side-nav-item menu-title">Kepegawaian</li>
                <li>
                   <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
                      <i class="bx bx-user-circle"></i>
@@ -241,27 +219,6 @@
                   </ul>
                </li>
                <li>
-                  <a href="javascript:void(0);" class="side-nav-link" aria-expanded="false">
-                     <i class="bx bx-user-circle"></i>
-                     <span> E-Absensi</span>
-                     <span class="menu-arrow"></span>
-                  </a>
-                  <ul aria-expanded="false" class="nav-second-level">
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="#"> Pengaturan Shift</a>
-                     </li>
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="#"> Rekapitulasi </a>
-                     </li>
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="#"> Laporan Absensi </a>
-                     </li>
-                     <li class="side-nav-item">
-                        <a class="side-nav-link" href="#"> Log </a>
-                     </li>
-                  </ul>
-               </li>
-               <li>
                   <a href="../documentation/index.html" target="_blank" class="side-nav-link" aria-expanded="false">
                      <i class="bx bx-file"></i>
                      <span> Documentation</span>
@@ -280,160 +237,266 @@
             <div class="page-title-box">
                <div class="container-fluid">
                   <div class="page-title dflex-between-center">
-                    <h3 class="mb-1 font-weight-bold">Rekap Absensi</h3>
+                    <h3 class="mb-1 font-weight-bold">Data Role</h3>
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="../index.html">
+                          <i class="bx bx-home fs-xs"></i>
+                        </a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="#">
+                          Setting & Konfigurasi
+                        </a>
+                      </li>
+                      <li class="breadcrumb-item active">Data Role</li>
+                    </ol>
                   </div>
                </div>
             </div>
             <!-- page content -->
             <div class="page-content-wrapper mt--45">
                <div class="container-fluid">
-                     <!-- Inline Form -->
-                     <div class="row">
-                        <div class="col-12">
-                        <div class="card">
-                           <div class="card-body">
-                              <form>
-                              <div class="form-row justify-content-center align-items-center">
-                                 <div class="col-12 col-md-3">
-                                    <div class="form-group">
-                                       <label for="example-select">Satuan Wilayah <span class="text-danger">*</span></label>
-                                       <select class="form-control" id="example-select">
-                                         <option>Satuan Pendidikan Wilayah Kecamatan</option>
-                                         <option>Satuan Pendidikan Wilayah Kecamatan</option>
-                                         <option>Satuan Pendidikan Wilayah Kecamatan</option>
-                                       </select>
-                                     </div>
-                                 </div>
-                                 <div class="col-12 col-md-3">
-                                    <div class="form-group">
-                                       <label for="example-select">Nama Sekolah <span class="text-danger">*</span></label>
-                                       <select class="form-control" id="example-select">
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                         <option>SMP Negeri</option>
-                                       </select>
-                                     </div>
-                                 </div>
-                                 <div class="col-12 col-md-2">
-                                    <div class="form-group">
-                                       <label for="example-select">Pilih Bulan <span class="text-danger">*</span></label>
-                                       <select class="form-control" id="example-select">
-                                         <option>Januari</option>
-                                         <option>Februari</option>
-                                         <option>Maret</option>
-                                         <option>April</option>
-                                         <option>Mei</option>
-                                         <option>Juni</option>
-                                         <option>Juli</option>
-                                       </select>
-                                     </div>
-                                 </div>
-                                 <div class="col-12 col-md-2">
-                                    <div class="form-group">
-                                       <label for="example-select">Pilih Tahun</label>
-                                       <select class="form-control" id="example-select">
-                                         <option>2023</option>
-                                         <option>2022</option>
-                                         <option>2021</option>
-                                       </select>
-                                     </div>
-                                 </div>
-                                 <div class="col-12 col-md-2 d-flex justify-content-center align-items-center">
-                                    <button type="submit" class="btn btn-primary waves-effect waves-light mr-2"><i class="bx bx-search"></i> Filter Pencarian</button>
-                                 </div>
-                              </div>
-                              </form>
-         
-                           </div> <!-- end card-body -->
-                        </div> <!-- end card -->
-                        </div> <!-- end col -->
-                     </div>
-                     <!-- end row -->
-
-                     <div class="row">
-                        <div class="col-12 mb-4">
-                           <button type="submit" class="btn btn-success waves-effect waves-light"><i class="bx bx-download"></i> Download Rekap</button>
+                  <div class="card">
+                     <div class="card-body">
+                        <div class="extra-btn-table">
+                           <button type="button" class="btn btn-primary" data-toggle="modal"
+                           data-target="#centermodal" data-effect="wave">
+                              <i class="bx bx-plus bx-flashing"></i>
+                              Buat Role Baru
+                           </button>
                         </div>
+                        <table class="table table-centered dt-responsive nowrap w-100" id="view_contact_list">
+                           <thead class="thead-light">
+                              <tr>
+                                 <th style="width: 70px;">No</th>
+                                 <th>Role</th>
+                                 <th>Permission</th>
+                                 <th class="text-center">Aksi</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <strong>1</strong>
+                                 </td>
+                                 <td>
+                                    <a  class="text-default text-capitalize">Developer</a>
+                                 </td>
+                                 <td>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">dashboard.index</span>
+                                    </a>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">lkh.index</span>
+                                    </a>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">log.index</span>
+                                    </a>
+                                 </td>
+                                 <td class="text-center">
+                                    <a href="#" class="avatar avatar-sm bg-primary text-white" data-effect="wave" data-target="#editmodal" data-toggle="modal">
+                                       <i class="mdi mdi-file-edit-outline"></i>
+                                    </a>
+                                    <a href="#" class="avatar avatar-sm bg-danger text-white" data-effect="wave" data-toggle="modal">
+                                       <i class="mdi mdi-trash-can"></i>
+                                    </a>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <strong>2</strong>
+                                 </td>
+                                 <td>
+                                    <a  class="text-default text-capitalize">SuperAdmin</a>
+                                 </td>
+                                 <td>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">dashboard.index</span>
+                                    </a>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">lkh.index</span>
+                                    </a>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">log.index</span>
+                                    </a>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">absensi.index</span>
+                                    </a>
+                                    <a  class="text-default">
+                                       <span class="badge badge-primary">rekap_absensi.index</span>
+                                    </a>
+                                 </td>
+                                 <td class="text-center">
+                                    <a href="#" class="avatar avatar-sm bg-primary text-white" data-effect="wave" data-target="#editmodal" data-toggle="modal">
+                                       <i class="mdi mdi-file-edit-outline"></i>
+                                    </a>
+                                    <a href="#" class="avatar avatar-sm bg-danger text-white" data-effect="wave" data-toggle="modal">
+                                       <i class="mdi mdi-trash-can"></i>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
                      </div>
-
-                     <!-- Inline Form -->
-                     <div class="row">
-                        <div class="col-12">
-                        <div class="card">
-                           <div class="card-body">
-                              <div class="row">
-                                 <div class="col-xl-12">
-                                    <div class="card-header p-0 mb-1 pb-3">
-                                       <h5 class="card-title">Rekapitulasi Absensi</h5>
-                                    </div>
-                                    <table class="table table-centered dt-responsive w-100 dataTable no-footer dtr-inline project-list" id="view_project_list">
-                                       <thead class="thead-light text-center">
-                                          <tr>
-                                             <th rowspan="2">No</th>
-                                             <th rowspan="2">NIP</th>
-                                             <th rowspan="2">Nama Pegawai</th>
-                                             <th colspan="8">Jumlah Hari</th>
-
-                                             <th rowspan="2">Aksi</th>
-                                          </tr>
-                                          <tr>
-                                             <th><span class="badge badge-success">H</span></th>
-                                             <th><span class="badge badge-success">DL</span></th>
-                                             <th><span class="badge badge-success">DK</span></th>
-                                             <th><span class="badge badge-warning">TAP</span></th>
-                                             <th><span class="badge badge-secondary">S</span></th>
-                                             <th><span class="badge badge-secondary">C</span></th>
-                                             <th><span class="badge badge-secondary">I</span></th>
-                                             <th><span class="badge badge-danger">TK</span></th>
-                                          </tr>
-                                       </thead>
-                                       <tbody>
-                                          <tr>
-                                             <td class="text-center">1</td>
-                                             <td class="text-center">19720102101390271</td>
-                                             <td>Michele Agata</td>
-                                             <td class="text-center">1</td>
-                                             <td class="text-center">12</td>
-                                             <td class="text-center">10</td>
-                                             <td class="text-center">1</td>
-                                             <td class="text-center">3</td>
-                                             <td class="text-center">4</td>
-                                             <td class="text-center">-</td>
-                                             <td class="text-center">-</td>
-                                             <td class="text-center">
-                                                <div class="dropdown">
-                                                   <a href="javascript:void(0)" class="btn-icon btn-icon-sm btn-icon-soft-primary"
-                                                      data-toggle="dropdown">
-                                                      <i class="mdi mdi-dots-horizontal fs-sm"></i>
-                                                   </a>
-                                                   <div class="dropdown-menu dropdown-menu-right">
-                                                      <a href="#" class="dropdown-item">Action 1</a>
-                                                      <a href="#" class="dropdown-item">Action 2</a>
-                                                   </div>
-                                                </div>
-                                             </td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </div> <!-- end col -->
-                              </div> <!-- end row -->
-                           </div> <!-- end card-body -->
-                        </div> <!-- end card -->
-                        </div> <!-- end col -->
-                     </div>
-                     <!-- end row -->
-
+                  </div>
                </div>
             </div>
          </div>
       </div>
-
       <!-- main content End -->
+
+
+      <!-- Modal Import Pegawai -->
+      <!-- Center modal content -->
+      <div class="modal fade" data-backdrop="static" id="centermodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content border-0">
+            <div class="modal-header">
+            <h4 class="modal-title" id="myCenterModalLabel">Buat Role Baru</h4>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-lg-12">
+                    <form action="#">
+                        <div class="row">
+                           <div class="col-12">
+                              <div class="form-group">
+                              <label for="nlengkap">Nama Role</label>
+                              <input type="text" id="nlengkap" name="nlengkap" class="form-control"
+                                 placeholder="Developer">
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="row mb-5">
+                           <div class="col-12 mb-3 font-weight-bold">
+                              <span>Setting Permission</span>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox1" type="checkbox" checked>
+                                 <label for="checkbox1">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox2" type="checkbox">
+                                 <label for="checkbox2">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox3" type="checkbox" checked>
+                                 <label for="checkbox3">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox4" type="checkbox">
+                                 <label for="checkbox4">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+
+
+                <div class="text-right">
+                   <button type="button" class="btn btn-warning waves-effect" data-dismiss="modal" aria-hidden="true">Batal</button>
+                   <button type="button" class="btn btn-primary" data-effect="wave" id="sa-importpegawai" data-dismiss="modal" aria-hidden="true"><i class="bx bx-save mr-1"></i>Simpan</button>
+                </div>
+            </div>
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- Center modal content -->
+      <div class="modal fade" data-backdrop="static" id="editmodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+         <div class="modal-content border-0">
+            <div class="modal-header">
+            <h4 class="modal-title" id="myCenterModalLabel">Edit Role</h4>
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-lg-12">
+                    <form action="#">
+                        <div class="row">
+                           <div class="col-12">
+                              <div class="form-group">
+                              <label for="nlengkap">Nama Role</label>
+                              <input type="text" id="nlengkap" name="nlengkap" class="form-control"
+                                 placeholder="Developer">
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="row mb-5">
+                           <div class="col-12 mb-3 font-weight-bold">
+                              <span>Setting Permission</span>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox1" type="checkbox" checked>
+                                 <label for="checkbox1">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox2" type="checkbox">
+                                 <label for="checkbox2">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox3" type="checkbox" checked>
+                                 <label for="checkbox3">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                           <div class="col-12 col-md-4">
+                              <div class="checkbox checkbox-primary mb-2">
+                                 <input id="checkbox4" type="checkbox">
+                                 <label for="checkbox4">
+                                    Check this custom checkbox
+                                 </label>
+                               </div>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+
+
+                <div class="text-right">
+                   <button type="button" class="btn btn-warning waves-effect" data-dismiss="modal" aria-hidden="true">Batal</button>
+                   <button type="button" class="btn btn-primary" data-effect="wave" id="sa-importpegawai" data-dismiss="modal" aria-hidden="true"><i class="bx bx-save mr-1"></i>Simpan</button>
+                </div>
+            </div>
+         </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
       <!-- footer -->
       <!-- footer -->
       <footer class="footer">
@@ -448,6 +511,7 @@
             </div>
          </div>
       </footer>
+
 
       <div class="setting-sidebar">
          <div class="card mb-0">
@@ -483,22 +547,21 @@
    <!-- Page End -->
    <!-- ================== BEGIN BASE JS ================== -->
    <script src="assets/js/vendor.min.js"></script>
-   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-   <!-- ================== END BASE JS ================== -->
-
-   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-   <script src="assets/libs/flatpicker/js/flatpickr.js"></script>
-   <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-   <script src="assets/libs/chartjs/js/Chart.bundle.min.js"></script>
-   <script src="assets/js/utils/colors.js"></script>
-   <script src="assets/js/pages/dashboard.init.js"></script>
    <script src="assets/libs/datatables/js/jquery.dataTables.min.js"></script>
    <script src="assets/libs/datatables/js/dataTables.bootstrap4.min.js"></script>
    <script src="assets/libs/datatables/js/dataTables.responsive.min.js"></script>
    <script src="assets/libs/datatables/js/responsive.bootstrap4.min.js"></script>
+
    <script src="assets/libs/datatables/js/dataTables.keyTable.min.js"></script>
    <script src="assets/libs/datatables/js/dataTables.select.min.js"></script>
-   <script src="assets/js/pages/project-list.init.js"></script>
+   <!-- ================== END PAGE LEVEL JS ================== -->
+   <!-- ================== BEGIN PAGE JS ================== -->
+   <script src="assets/js/pages/member-list.init.js"></script>
+  <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+  <script src="assets/js/pages/sweet-alerts.init.js"></script>
+   <!-- ================== END BASE JS ================== -->
+
+   <!-- ================== BEGIN PAGE LEVEL JS ================== -->
    <!-- ================== END PAGE LEVEL JS ================== -->
    <!-- ================== BEGIN PAGE JS ================== -->
    <script src="assets/js/app.js"></script>

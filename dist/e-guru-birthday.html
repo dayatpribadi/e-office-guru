@@ -25,7 +25,8 @@
    <link href="assets/libs/bootstrap-touchspin/css/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" />
    <link href="assets/libs/dropify/css/dropify.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="assets/libs/bootstrap-treeview/css/bootstrap-treeview.min.css" />
+   <link href="assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+   <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
    <!-- ================== BEGIN PAGE LEVEL END ================== -->
    <!-- ================== BEGIN APP CSS  ================== -->
    <link rel="stylesheet" href="assets/css/bootstrap.css" />
@@ -241,7 +242,7 @@
             <div class="page-title-box">
                <div class="container-fluid">
                   <div class="page-title dflex-between-center">
-                    <h3 class="mb-1 font-weight-bold">Daftar SKPD</h3>
+                    <h3 class="mb-1 font-weight-bold">Birthday Guru</h3>
                   </div>
                </div>
             </div>
@@ -250,199 +251,236 @@
                <div class="container-fluid">
                   <div class="card">
                      <div class="card-body">
+                     <!-- Inline Form -->
                         <div class="row">
-                           <div class="col-lg-4 col-xl-3">
-                              <div class="card">
-                                 <div class="card-body">
-                                    <div class="media justify-content-center mb-3">
-                                       <img src="assets/images/logo-ori.png" width="200" alt="Lettstart Admin" class="rounded my-3 mr-3" />
-                                    </div>
-                                    <div class="text-center mb-3">
-                                       <button type="button" class="btn btn-primary btn-sm mr-1" id="msg-btn">Update</button>
-                                       <button type="button" class="btn btn-danger btn-sm">Delete</button>
-                                    </div>
-
-                                    <div class="mt-3 pt-2 border-top">
-                                       <h5 class="mb-3 pt-2 font-weight-600">Detail Perangkat Daerah</h5>
-                                          <div class="table-responsive">
-                                             <table class="table table-borderless text-muted mb-0 table-sm">
-                                                <tbody>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Nama Perangkat Daerah</th>
-                                                      <td>Dinas Pendidikan dan Kebudayaan</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Nama Alias</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Jenis Perangkat Daerah</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Perangkat Daerah Induk</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Telepon</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Fax</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Email</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Website</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Alamat</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Kode Pos</th>
-                                                      <td>-</td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Koordinat Peta</th>
-                                                      <td><span class="badge badge-primary"><i class="bx bx-map-pin mr-1"></i>Lihat Peta</span></td>
-                                                   </tr>
-                                                   <tr>
-                                                      <th class="pl-0" scope="row">Terakhir di Update</th>
-                                                      <td>1 Minggu yang lalu</td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
+                           <div class="col-12">
+                              <form>
+                                 <div class="form-row justify-content-between align-items-center">
+                                    <div class="col-12 col-md-5">
+                                       <div class="form-group">
+                                          <label for="pegawai">Status<span class="text-danger">*</span></label>
+                                          <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                             data-placeholder="Choose ...">
+                                             <option value="YK">Lorem, ipsum.</option>
+                                             <option value="AT">Lorem, ipsum dolor.</option>
+                                             <option value="YK">Lorem, ipsum.</option>
+                                             <option value="AT">Lorem, ipsum dolor.</option>
+                                          </select>
+                                          <div class="validation-error d-none font-size-13">
+                                             Designation can not be blank.
                                           </div>
+                                       </div>     
                                     </div>
-                                    <div class="mt-3 pt-2 border-top">
-                                       <h5 class="mb-3 pt-2 font-weight-600">Sosial Media</h5>
-                                          <label class="badge badge-soft-primary"><i class="bx bxl-facebook mr-1"></i> Facebook</label>
-                                          <label class="badge badge-soft-danger"><i class="bx bxl-instagram mr-1"></i>Instagram</label>
-                                          <label class="badge badge-soft-info"><i class="bx bxl-twitter mr-1"></i>Twitter</label>
-                                    </div>
-                                 </div>
-                              </div>
-
-                           </div>
-                           <div class="col-lg-8 col-xl-9">
-                              <style>
-                                 #myUL {
-                                    margin: 0;
-                                    padding: 0;
-                                 }
-
-                                 /* Style the caret/arrow */
-                                 .caret {
-                                    cursor: pointer; 
-                                    user-select: none; /* Prevent text selection */
-                                 }
-
-                                 /* Hide the nested list */
-                                 .nested {
-                                    display: none;
-
-                                 }
-
-                                 /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-                                 .active {
-                                    display: block;
-                                 }
-                              </style>
-
-                              <div class="card">
-                                 <div class="card-body">
-                                    <div class="row text-right pr-0">
-                                       <div class="col-12">
-                                          <button type="button" class="btn btn-outline-primary"><i class="bx bx-plus mr-2"></i> Tambah Unit Kerja</button>
+                                    <div class="col-12 col-md-5">
+                                       <div class="form-group">
+                                          <label for="example-email">Birthday</label>
+                                          <input type="datetime-local" id="example-email" name="example-email" class="form-control"
+                                          placeholder="23 Mei 2023">
                                        </div>
                                     </div>
-                                 </div>
-
-                                 <div class="row">
-                                    <div class="col-12">
-                                       <ul id="myUL" class="list-unstyled">
-                                          <li>
-                                             <span class="caret">
-                                                <div class="col-lg-12">
-                                                   <div class="custom-accordion">
-                                                     <div class="card shadow-none mb-3">
-                                                       <a>
-                                                         <div class="card-header py-3" id="is">
-                                                           <h6 class="mb-0">
-                                                             <i class="mdi mdi-home-search-outline text-primary h5 mr-3"></i>Parent
-                                                             <i class="mdi mdi-trash-can float-right toggle-icon fs-sm bg-danger px-1 rounded text-white ml-2"></i>
-                                                             <i class="mdi mdi-pencil-box-outline float-right toggle-icon fs-sm bg-primary px-1 rounded text-white"></i>
-                                                           </h6>
-                                                         </div>
-                                                       </a>
-                                                     </div>
-                                                   </div>
-                                                </div>
-                                             </span>
-                                             <ul class="nested list-unstyled">
-                                                <li class="list-unstyled">
-                                                   <span class="caret">
-                                                      <div class="col-lg-12">
-                                                         <div class="custom-accordion">
-                                                            <div class="card shadow-none mb-3 ml-3">
-                                                               <a>
-                                                               <div class="card-header py-3" id="is">
-                                                                  <h6 class="mb-0">
-                                                                     <i class="mdi mdi-home-search-outline text-primary h5 mr-3"></i>Child I
-                                                                     <i class="mdi mdi-trash-can float-right toggle-icon fs-sm bg-danger px-1 rounded text-white ml-2"></i>
-                                                                     <i class="mdi mdi-pencil-box-outline float-right toggle-icon fs-sm bg-primary px-1 rounded text-white"></i>
-                                                                  </h6>
-                                                               </div>
-                                                               </a>
-                                                            </div>
-                                                         </div>
-                                                      </div>
-                                                   </span>
-                                                   <ul class="nested list-unstyled">
-                                                      <li class="list-unstyled">
-                                                         <span class="caret">
-                                                            <div class="col-lg-12">
-                                                               <div class="custom-accordion">
-                                                                 <div class="card shadow-none mb-3 ml-5">
-                                                                   <a>
-                                                                     <div class="card-header py-3" id="is">
-                                                                       <h6 class="mb-0">
-                                                                         <i class="mdi mdi-home-search-outline text-primary h5 mr-3"></i>Child II
-                                                                         <i class="mdi mdi-trash-can float-right toggle-icon fs-sm bg-danger px-1 rounded text-white ml-2"></i>
-                                                                         <i class="mdi mdi-pencil-box-outline float-right toggle-icon fs-sm bg-primary px-1 rounded text-white"></i>
-                                                                       </h6>
-                                                                     </div>
-                                                                   </a>
-                                                                 </div>
-                                                               </div>
-                                                            </div>
-                                                         </span>
-                                                      </li>
-                                                   </ul>
-                                                </li>
-                                             </ul>
-                                          </li>
-                                       </ul>
+                                    <div class="col-12 col-md-2 text-md-center">
+                                       <button type="submit" class="btn btn-primary waves-effect waves-light my-2"><i class="bx bx-search"></i> Filter Pencarian</button>
                                     </div>
                                  </div>
-                              </div>
-                              <!-- end card -->
+                              </form>
                            </div>
                         </div>
                      </div>
                   </div>
-               
+                  <div class="row">
+                     <div class="col-12">
+                       <div class="card">
+                         <!-- <div class="card-header">
+                           <div class="row">
+                              <div class="col-12 col-md-6">
+                                 <h5 class="card-title">Laporan Kinerja Harian</h5>
+                              </div>
+                              <div class="col-12 col-md-6 text-md-right">
+                                 <a href="#" class="btn btn-success" data-effect="wave">
+                                    <i class="bx bx-down-arrow-circle bx-flashing"></i>
+                                    Verifikasi LKH Terpilih
+                                 </a>
+                              </div>
+                           </div>
+                         </div> -->
+                         <div class="card-body">
+                           <table data-toggle="table" data-page-size="5" data-buttons-class="xs btn-light"
+                             data-pagination="true" class="table-bordered ">
+                             <thead class="thead-light">
+                               <tr>
+                                 <th data-field="state" data-checkbox="true"></th>
+                                 <th data-field="id" data-switchable="false">Nama Lengkap</th>
+                                 <th data-field="date">NIP</th>
+                                 <th data-field="tupoksi">Umur Sekarang</th>
+                                 <th data-field="keg">Waktu Berjalan</th>
+                                 <th data-field="aksi" class="text-center">Aksi</th>
+                               </tr>
+                             </thead>
+       
+       
+                             <tbody>
+                               <tr>
+                                 <td></td>
+                                 <td>Zainuban</td>
+                                 <td>1955010120000111001</td>
+                                 <td>60 Tahun, 0 Bulan, 14 Hari</td>
+                                 <td>7 Hari 10:10:34 Jam</td>
+                                 <td class="text-center">
+                                    <button class="btn btn-primary brand-btn btn-rounded" data-effect="wave" type="button">
+                                       <span class="brand-icon">
+                                         <i class="mdi mdi-flower-tulip-outline fs-xs align-middle"></i>
+                                       </span>
+                                       <span class="align-middle">Kirim Ucapan</span>
+                                     </button>
+                                  </td>
+                               </tr>
+                             </tbody>
+                           </table>
+                         </div>
+                       </div> <!-- end card-box-->
+                     </div> <!-- end col-->
+                   </div>
+                   <!-- end row -->
+
                </div>
             </div>
          </div>
       </div>
       <!-- main content End -->
-      <!-- footer -->
+
+      <!-- Modal Edit LKH -->
+      <!-- Center modal content -->
+      <div class="modal fade" id="editLKH" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+               <h4 class="modal-title" id="myCenterModalLabel">Detail LKH</h4>
+               <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+               </div>
+               <div class="modal-body">
+                  <form action="#">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="form-group floating-label enable-floating-label show-label">
+                              <input class="form-control" id="tgl-awal" name="validation-designation" type="date"
+                                 placeholder="tgl-awal">
+                              <label for="tgl-awal">Tanggal<span class="text-danger">*</span></label>
+                              <div class="validation-error d-none font-size-13">
+                                 Designation can not be blank.
+                              </div>
+                           </div>   
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group floating-label enable-floating-label show-label">
+                              <label for="pegawai">Tugas & Fungsi<span class="text-danger">*</span></label>
+                              <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                 data-placeholder="Choose ...">
+                                 <option value="YK">Lorem ipsum dolor sit amet.</option>
+                                 <option value="AT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ratione?</option>
+                                 <option value="AT">Lorem ipsum dolor sit amet consectetur adipisicing.</option>
+                                 <option value="AT">Lorem, ipsum dolor.</option>
+                                 <option value="AT">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</option>
+                              </select>
+                              <div class="validation-error d-none font-size-13">
+                                 Designation can not be blank.
+                              </div>
+                           </div>     
+                        </div>
+                        <div class="col-12 mb-4">
+                           <label class="mb-1 font-weight-medium text-muted">Uraian</label>
+                           <textarea id="textarea" class="form-control" maxlength="500" rows="3"
+                           placeholder="This textarea has a limit of 500 chars."></textarea>
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group floating-label enable-floating-label show-label">
+                              <input class="form-control" id="tgl-awal" name="validation-designation" type="time"
+                                 placeholder="tgl-awal">
+                              <label for="tgl-awal">Jam Mulai Mengajar<span class="text-danger">*</span></label>
+                              <div class="validation-error d-none font-size-13">
+                                 Designation can not be blank.
+                              </div>
+                           </div>   
+                        </div>
+                        <div class="col-12 col-md-6">
+                           <div class="form-group floating-label enable-floating-label show-label">
+                              <input class="form-control" id="tgl-akhir" name="validation-designation" type="time"
+                                 placeholder="tgl-akhir">
+                              <label for="tgl-akhir">Jam Selesai Mengajar<span class="text-danger">*</span></label>
+                              <div class="validation-error d-none font-size-13">
+                                 Designation can not be blank.
+                              </div>
+                           </div>   
+                        </div>
+                        <div class="col-12">
+                           <label class="mb-1 font-weight-medium text-muted">Output/Harian</label>
+                           <textarea id="textarea" class="form-control" maxlength="500" rows="3"
+                           placeholder="This textarea has a limit of 500 chars."></textarea>
+                        </div>
+
+                        <div class="col-12">
+                           <div class="mt-3">
+                              <label class="mb-1 font-weight-medium text-muted">Bukti</label>
+                           <input type="file" data-plugins="dropify" data-max-file-size="1M" />
+                           <p class="text-danger text-center mt-2 mb-0">Max File size : 2Mb | Tipe File Upload : JPEG, PNG, JPG</p>
+                           </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                           <div class="form-group floating-label enable-floating-label show-label">
+                              <label for="pegawai">Verifikator<span class="text-danger">*</span></label>
+                              <select class="form-control select2-multiple" data-toggle="select2" multiple="multiple"
+                                 data-placeholder="Choose ...">
+                                 <option value="YK">Ahmad</option>
+                                 <option value="AT">Muhammad</option>
+                                 <option value="AT">Abdullah</option>
+                                 <option value="AT">Rasyid</option>
+                              </select>
+                              <div class="validation-error d-none font-size-13">
+                                 Designation can not be blank.
+                              </div>
+                           </div>     
+                        </div>
+                     </div>
+                     <!-- <div class="text-right">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Tambah</button>
+                     </div> -->
+                  </form>
+               </div>
+            </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- Center modal content -->
+      <div class="modal fade" id="modalTolak" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+               <h4 class="modal-title" id="myCenterModalLabel">Tolak LKH</h4>
+               <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+               </div>
+               <div class="modal-body">
+                  <form action="#">
+                     <div class="row">
+                        <div class="col-12">
+                           <label class="mb-1 font-weight-medium text-muted">Catatan Penolakan</label>
+                           <textarea id="textarea" class="form-control" maxlength="500" rows="3"
+                           placeholder="This textarea has a limit of 500 chars."></textarea>
+                        </div>
+
+                     </div>
+                     <div class="text-right mt-3">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Batal</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Simpan</button>
+                     </div>
+                  </form>
+               </div>
+            </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+
+
       <!-- footer -->
       <footer class="footer">
          <div class="container-fluid">
@@ -491,18 +529,6 @@
    </div>
    <!-- Page End -->
    <!-- ================== BEGIN BASE JS ================== -->
-   <script>
-      var toggler = document.getElementsByClassName("caret");
-      var i;
-      
-      for (i = 0; i < toggler.length; i++) {
-      toggler[i].addEventListener("click", function() {
-         this.parentElement.querySelector(".nested").classList.toggle("active");
-         this.classList.toggle("caret-down");
-      });
-      }
-   </script>
-
    <script src="assets/js/vendor.min.js"></script>
    <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
    <script src="assets/libs/selectize/js/standalone/selectize.min.js"></script>
@@ -514,22 +540,20 @@
    <script src="assets/libs/devbridge-autocomplete/jquery.autocomplete.min.js"></script>
    <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
    <script src="assets/libs/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+   <script src="assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
+ 
    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
   <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
   <script src="assets/libs/dropify/js/dropify.min.js"></script>
-  <!-- ================== END PAGE LEVEL JS ================== -->
-  <!-- ================== BEGIN PAGE JS ================== -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweet-alerts.init.js"></script>
   <script src="assets/js/pages/form-fileuploads.init.js"></script>
   <script src="assets/js/pages/form-advanced.init.js"></script>
+  <script src="assets/js/pages/bootstrap-tables.init.js"></script>
    <script src="assets/js/app.js"></script>
    <!-- ================== END PAGE JS ================== -->
-     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-  <script src="assets/libs/bootstrap-treeview/js/bootstrap-treeview.min.js"></script>
-  <!-- ================== END PAGE LEVEL JS ================== -->
-
-  <!-- ================== BEGIN PAGE JS ================== -->
-  <script src="assets/js/utils/colors.js"></script>
-  <script src="assets/js/pages/treeview.init.js"></script>
 </body>
 
 </html>
