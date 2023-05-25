@@ -5913,3 +5913,8 @@ table[data-toggle="table"] {
   height: 300px;
   overflow: scroll;
 }
+
+.card-guru {
+  height: 340px;
+  overflow: scroll;
+}
