@@ -5907,3 +5907,9 @@ table[data-toggle="table"] {
 @media (max-width: 575.98px) {
   .header-item.btn {
     padding: 0.5rem  8px; } }
+
+
+.card-lkh {
+  height: 300px;
+  overflow: scroll;
+}
