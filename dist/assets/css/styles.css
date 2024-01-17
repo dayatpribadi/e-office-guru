@@ -4664,10 +4664,10 @@ table[data-toggle="table"] {
   padding: 100px 0 50px 0; }
 
 .auth-page-sidebar {
-  padding: 0;
+  padding: 30px;
   background-image: url("../../assets/images/auth/01.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   height: 100%;
   position: relative; }
